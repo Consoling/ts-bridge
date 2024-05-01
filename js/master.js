@@ -1,23 +1,11 @@
 const dropdownBtn = document.getElementById('nav__dpdn_btn');
-const dropdownElmnts = document.getElementById('nav__dpdn_elmnts__active');
+const dropdownElmnts = document.getElementById('nav_dpdn_elmnts_active');
 
 dropdownBtn.addEventListener('click',() => {
    dropdownElmnts.classList.toggle('active');
   
 } )
 
-document.querySelectorAll(".diamond_img")
-.forEach(function(elem){
-    elem.addEventListener("mousemove",function(dets){
-        gsap.to(elem.querySelector("img"),{
-            opacity: 1,
-            // height: 120%,
-            ease: Power1,
-            top: dets.clientY,
-            left: dets.clientX
-        })
-    })
-})
 
 var crsr = document.querySelectorAll(".diamond_img");
 
