@@ -32,7 +32,7 @@
     <!-- Nav section -->
 
     <nav
-      class="nav__before__header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-8"
+      class="sticky top-0 nav__before__header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-6"
     >
       <div
         class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
@@ -43,7 +43,7 @@
         >
       </div>
       <ul
-        class="flex block text-[#101114] p-4 rounded-3xl gap-10 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+        class="flex block text-[#101114] py-3 rounded-3xl gap-10 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
       >
         <li
           class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
@@ -143,10 +143,44 @@
 
     <!-- Banner Section -->
 
-    <header id="header__sec__top">
+    <header id="header__sec__top"></header>
 
-        
-    </header>
+    <!-- Community Members Section -->
+
+    <section
+      class="community__members_slider bg-gradient-to-b from-gray-900 to-gray-50"
+    >
+      <div class="lg:py-18 rounded-t-3xl bg-gray-50 py-4">
+        <div class="container mx-auto">
+          <h3
+            class="text-2xs lg:text-lg mb-8 select-none text-center uppercase text-gray-700 font-bold"
+          >
+            Our community members come from
+          </h3>
+          <div
+            class="mt-7 rounded-full border border-gray-400 px-6 px-4 lg:py-10"
+          >
+            <marquee direction="left" class="" scrollamount="12" loop>
+              <div class="flex flex-row gap-16">
+                <img src="/media/college-1.png" alt="college-1" class="w-36 object-contain  max-h-[40px]" />
+                <img src="/media/college-2.png" alt="college-2" class="w-32 object-contain  max-h-[40px]" />
+                <img src="/media/college-3.jpeg" alt="college-3" class="w-32 object-contain  max-h-[40px]" />
+                <img src="/media/college-4.png" alt="college-4" class="w-48 object-contain  max-h-[40px]" />
+                <img src="/media/college-5.jpeg" alt="college-5" class="w-40 object-contain  max-h-[40px]" />
+                <img src="/media/college-6.png" alt="college-6" class="w-28 object-contain  max-h-[40px]" />
+                <img src="/media/college-7.png" alt="college-7" class="w-40  object-contain max-h-[40px]" />
+              </div>
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What we Do?  -->
+
+    <section class="what__we__do lg:py-18 container flex">
+        <div class="">hfhag</div>
+    </section>
     <script src="/js/master.js"></script>
   </body>
 </html>
