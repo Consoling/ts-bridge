@@ -101,4 +101,29 @@ h6 {
 #diamond_img_8{
   left: 50%;
   top: 40%;
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  #diamond_img_3 {
+    opacity: 0;
+  }
+
+  #diamond_img_5 {
+    opacity: 0;
+  }
+
+  #diamond_img_2{
+    opacity: 0;
+  }
+}
+
+.card__what__we__do {
+  width: 252px;
+    height: 350px;
+    
+    
+   
+    border-radius: 8px;
+    cursor: pointer;
 }
