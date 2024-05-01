@@ -56,3 +56,49 @@ h6 {
 .nav__dpdn_elmnts__active.active {
     display: block;
 }
+
+.header__sec__top{
+  position: relative;
+}
+
+.diamond_img{
+  position: absolute;
+}
+#diamond_img_1{
+  right: 50%;
+  bottom: 10%;
+  width: 80px;
+  opacity: 0.5;
+}
+#diamond_img_2{
+  right: 20%;
+  bottom: 15%;
+}
+#diamond_img_3{
+  left: 20%;
+  top: 30%;
+}
+#diamond_img_4{
+  right: 30%;
+  top: 20%;
+  opacity: 0.5;
+}
+#diamond_img_5{
+  left: 10%;
+  bottom: 5%;
+}
+#diamond_img_6{
+  right: 5%;
+  bottom: 40%;
+  width: 80px;
+}
+#diamond_img_7{
+  left: 2%;
+  top: 35%;
+  width: 80px;
+  opacity: 0.5;
+}
+#diamond_img_8{
+  left: 50%;
+  top: 40%;
+}
