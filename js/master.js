@@ -1,5 +1,5 @@
 const dropdownBtn = document.getElementById('nav__dpdn_btn');
-const dropdownElmnts = document.getElementById('nav_dpdn_elmnts_active');
+const dropdownElmnts = document.getElementById('nav__dpdn_elmnts__active');
 
 dropdownBtn.addEventListener('click',() => {
    dropdownElmnts.classList.toggle('active');
@@ -26,5 +26,31 @@ function moveImagesTowardsCursor() {
         });
     });
 }
+
+
+
+
+const openModal = document.querySelectorAll('.modal-open')
+
+openModal.forEach(function(card){
+    card.onclick = function(){
+        var modal = card.getAttribute('data-modal');
+
+        document.getElementById(modal).style.display = "block";
+    }
+})
+
+const closeBtn = document.querySelectorAll('.modal-close');
+
+closeBtn.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = btn.closest(".modal").style.display = "none";
+    }
+})
+
+
+
+
+
 
 moveImagesTowardsCursor();
