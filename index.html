@@ -32,7 +32,7 @@
     <!-- Nav section -->
 
     <nav
-      class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+      class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5 z-999"
     >
       <div
         class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
@@ -143,7 +143,7 @@
 
     <!-- Banner Section -->
 
-    <header id="header_sec_top" class="cursor-pointer z-0">
+    <header id="header_sec_top" class="cursor-pointer ">
       <img src="/media/diamond.png" class="diamond_img" id="diamond_img_1" />
       <img src="/media/diamond.png" class="diamond_img" id="diamond_img_2" />
       <img src="/media/diamond.png" class="diamond_img" id="diamond_img_3" />
@@ -154,7 +154,7 @@
       <img src="/media/diamond.png" class="diamond_img" id="diamond_img_8" />
 
       <div
-        class="flex justify-center items-center h-[80%] flex-col gap-10 mx-10"
+        class="flex justify-center items-center h-[80%] flex-col gap-10 mx-10 z-10"
       >
         <div
           class="max-w-6xl text-2xl font-semibold leading-relaxed md:text-4xl lg:text-5xl"
@@ -386,21 +386,32 @@
           <p class="text-white font-semibold text-sm">See Program-></p>
         </div>
 
-        <div class="modal" id="modal-1">
-          <div class="modal-content">hello</div>
-          <i class="fa-solid fa-xmark modal-close" ></i>
+        <!-- modal -->
+
+        <div class="modal shadow-md shadow-black/90 ring-1 hidden" id="modal-1">
+          <div class="modal-heading">
+            <h1>Marketing</h1>
+            <i class="fa-solid fa-xmark modal-close" ></i>
+          </div>
+          <hr/>
+          <div class="modal-content">
+            <h1>What's included in the program ?</h1>
+            <ul>
+              <li>Fundamentals of Digital Marketing</li>
+              <li>SEO Fundamentals</li>
+              <li>Social Media Marketing</li>
+              <li>Marketing Automation</li>
+            </ul>
+          </div>
+          <button>See Details <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+          
         </div>
-        
+
       </div>
 
       
       
     </div>
-
-
-    <!-- modals -->
-
-    
 
     <!-- FAQ section -->
 
