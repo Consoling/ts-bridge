@@ -27,15 +27,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 0 !important;
 }
-
-
 
 @keyframes slideDown {
   0% {
@@ -52,59 +50,58 @@ h6 {
   animation: slideDown 0.5s ease-in forwards;
 }
 
-
 .nav_dpdn_elmnts_active.active {
-    display: block;
+  display: block;
 }
 
-.header_sec_top{
+.header_sec_top {
   position: relative;
 }
 
-.diamond_img{
+.diamond_img {
   position: absolute;
 }
-#diamond_img_1{
+#diamond_img_1 {
   right: 50%;
   bottom: 10%;
   width: 80px;
   opacity: 0.5;
 }
-#diamond_img_2{
+#diamond_img_2 {
   right: 20%;
   bottom: 15%;
 }
-#diamond_img_3{
+#diamond_img_3 {
   left: 20%;
   top: 30%;
 }
-#diamond_img_4{
+#diamond_img_4 {
   right: 30%;
   top: 20%;
   opacity: 0.5;
 }
-#diamond_img_5{
+#diamond_img_5 {
   left: 10%;
   bottom: 5%;
 }
-#diamond_img_6{
+#diamond_img_6 {
   right: 5%;
   bottom: 40%;
   width: 80px;
 }
-#diamond_img_7{
+#diamond_img_7 {
   left: 2%;
   top: 35%;
   width: 80px;
   opacity: 0.5;
 }
-#diamond_img_8{
+#diamond_img_8 {
   left: 50%;
   top: 40%;
   opacity: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   #diamond_img_3 {
     opacity: 0;
   }
@@ -113,22 +110,18 @@ h6 {
     opacity: 0;
   }
 
-  #diamond_img_2{
+  #diamond_img_2 {
     opacity: 0;
   }
 }
 
 .card_whatwe_do {
   width: 252px;
-    height: 350px;
-    
-    
-   
-    border-radius: 8px;
-    cursor: pointer;
+  height: 350px;
+
+  border-radius: 8px;
+  cursor: pointer;
 }
-
-
 
 .main_card_container {
   margin-bottom: 50px;
@@ -141,7 +134,7 @@ h6 {
   line-height: 1.4;
 }
 
-.explore_prog_cards{
+.explore_prog_cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -168,27 +161,155 @@ h6 {
 .explore_prog_card:hover {
   transition: 0.3s ease;
   transform: scale(1.1);
-  cursor: pointer
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .explore_heading {
     font-size: 30px;
   }
-  .explore_prog_cards{
+  .explore_prog_cards {
     flex-direction: column;
     align-items: center;
   }
+
+  .page-padding2 {
+    padding: 0px 40px;
+  }
 }
 
-@media(max-width:1024px) {
+@media (max-width: 1024px) {
   .explore_prog_cards {
     padding: 0px 30px;
   }
 }
 
-
 .shadow-brutal {
   --tw-shadow: 0px 0px 0px 2px #000, 2px 2px 0px 2px #000;
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color), 2px 2px 0px 2px var(--tw-shadow-color);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color),
+    2px 2px 0px 2px var(--tw-shadow-color);
+}
+
+.is-about-us {
+  background-image: url("/media/about-banner.jpg");
+  background-position: 50%;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  padding: 200px 0px;
+  display: flex;
+}
+
+.section-gs-dark {
+  background-color: #030a21;
+  color: #fff;
+}
+
+.page-padding2 {
+  padding: 0px 120px;
+}
+
+.block-792 {
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.style-h1 {
+  font-size: 3.75rem;
+  line-height: 120%;
+  --webkit-text-stroke: 1px #000;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+.text-block257 {
+  opacity: 0.8;
+  margin: 24px 0 60px 0;
+  font-size: 1.25rem;
+}
+
+.section-ts {
+  position: relative;
+  overflow: hidden;
+}
+
+.padding-v-120 {
+  padding: 120px 0;
+}
+
+.about-layout {
+  grid-row-gap: 200px;
+  flex-direction: column;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.about-content {
+  z-index: 1;
+  grid-column-gap: 60px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.block-793 {
+  grid-row-gap: 8px;
+  flex-direction: column;
+  display: flex;
+}
+
+.about-heading {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.about-img {
+  border: 2px solid #030a21;
+}
+
+
+@media screen and (max-width: 479px) {
+  .about-img {
+    min-width: auto;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-layout {
+    grid-row-gap: 80px;
+  }
+
+  .about-content {
+    grid-row-gap: 39px;
+    flex-direction: column;
+  }
+
+  .about-img {
+    align-items: flex-start;
+    max-width: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-padding2 {
+    padding: 0px 48px;
+  }
+
+  .about-img {
+    min-width: 320px;
+    max-width: none;
+    height: auto;
+  }
 }
