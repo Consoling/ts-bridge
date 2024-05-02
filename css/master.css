@@ -9,6 +9,21 @@
   box-sizing: border-box;
 }
 
+.navbar__main, .footer__bottom {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(14, 144, 221, 1) 100%
+  );
+}
+
+.navbar_bg_changed {
+  background: #ffffff;
+  background: linear-gradient(80deg)
+  rgba(255,255,255,10)0%,
+  rgba(255,255,255,10)100%
+}
 .nav_head_title {
   font-family: "Protest Guerrilla", sans-serif;
 }
@@ -180,6 +195,13 @@ h6 {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .page-padding2 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .explore_prog_cards {
     padding: 0px 30px;
@@ -199,9 +221,10 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 90vh;
   padding: 200px 0px;
   display: flex;
+  margin-top:1px;
 }
 
 .section-gs-dark {
@@ -277,16 +300,26 @@ h6 {
 
 .about-img {
   border: 2px solid #030a21;
+  border-radius: 16px;
+  min-width: 500px;
+  max-width: 500px;
+  height: 400px;
+  overflow: hidden;
 }
 
-
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 1280px) {
   .about-img {
-    min-width: auto;
-    height: auto;
+    min-width: 620px;
+    max-width: 620px;
   }
 }
 
+@media screen and (max-width: 479px) {
+  .about-img {
+    min-width: 100px;
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .about-layout {
@@ -294,24 +327,29 @@ h6 {
   }
 
   .about-content {
-    grid-row-gap: 39px;
+    grid-row-gap: 30px;
     flex-direction: column;
   }
 
   .about-img {
-    align-items: flex-start;
+    align-self: flex-start;
     max-width: none;
+  }
+
+  .is-right {
   }
 }
 
-@media (max-width: 991px) {
-  .page-padding2 {
-    padding: 0px 48px;
-  }
-
+@media screen and (max-width: 1024px) {
   .about-img {
     min-width: 320px;
     max-width: none;
     height: auto;
   }
+
+  .page-padding2 {
+    padding: 0px 48px;
+  }
 }
+
+
