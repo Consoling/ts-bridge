@@ -69,6 +69,14 @@ h6 {
   display: block;
 }
 
+.abt-dropdwn-elmnts {
+  animation: slideDown 0.5s ease-in forwards;
+}
+
+.abt-dropdwn-elmnts.active {
+  display: block;
+}
+
 .header_sec_top {
   position: relative;
 }

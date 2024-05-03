@@ -1,6 +1,9 @@
 const dropdownBtn = document.getElementById("nav__dpdn_btn");
 const dropdownElmnts = document.getElementById("nav_dpdn_elmnts_active");
 
+const abtDropdwnbtn = document.getElementById("abt-dropdwn-btn");
+const abtDropdwnElmnts = document.getElementById('abt-dropdwn-elmnts');
+
 const cards = [
   {
     title: "Marketing",
@@ -159,6 +162,10 @@ cards.forEach((card, index) => {
 
 dropdownBtn.addEventListener("click", () => {
   dropdownElmnts.classList.toggle("active");
+});
+abtDropdwnbtn.addEventListener("click", () => {
+  alert(`jbdfb`)
+  abtDropdwnElmnts.classList.toggle("active");
 });
 
 var crsr = document.querySelectorAll(".diamond_img");
