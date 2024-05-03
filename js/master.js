@@ -163,10 +163,6 @@ cards.forEach((card, index) => {
 dropdownBtn.addEventListener("click", () => {
   dropdownElmnts.classList.toggle("active");
 });
-abtDropdwnbtn.addEventListener("click", () => {
-  alert(`jbdfb`)
-  abtDropdwnElmnts.classList.toggle("active");
-});
 
 var crsr = document.querySelectorAll(".diamond_img");
 
