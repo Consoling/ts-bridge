@@ -60,12 +60,12 @@ window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   const sectionTs = document.getElementById("sectionTs");
   const footer = document.querySelector("footer");
-  const homeNavbar = document.getElementById("homeNavbar");
-  const homeFooter = document.getElementById("homeFooter");
+  // const homeNavbar = document.getElementById("homeNavbar");
+  // const homeFooter = document.getElementById("homeFooter");
 
   const sectionTop = sectionTs.getBoundingClientRect().top;
   const footerTop = footer.getBoundingClientRect().top;
-  const homeFooterTop = homeFooter.getBoundingClientRect().top;
+  // const homeFooterTop = homeFooter.getBoundingClientRect().top;
 
   if (sectionTop <= navbar.offsetHeight) {
     navbar.classList.add("nav_bg_changed");
@@ -81,11 +81,6 @@ window.addEventListener("scroll", function () {
     navbar.style.position = "sticky";
   }
 
-  if (homeFooterTop <= homeNavbar.offsetHeight) {
-    homeNavbar.style.position = "";
-  } else {
-    homeNavbar.style.position = "sticky";
-  }
 });
 
 
