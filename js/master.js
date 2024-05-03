@@ -37,14 +37,6 @@ openModal.forEach(function (card) {
   };
 });
 
-// const closeBtn = document.querySelectorAll(".modal-close");
-
-// closeBtn.forEach(function (btn) {
-//   btn.onclick = function () {
-//     var modal = (btn.closest(".modal").style.display = "none");
-//   };
-// });
-
 const closeBtn = document.querySelectorAll(".modal-close");
 
 closeBtn.forEach(function (btn) {
@@ -60,12 +52,9 @@ window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   const sectionTs = document.getElementById("sectionTs");
   const footer = document.querySelector("footer");
-  // const homeNavbar = document.getElementById("homeNavbar");
-  // const homeFooter = document.getElementById("homeFooter");
 
   const sectionTop = sectionTs.getBoundingClientRect().top;
   const footerTop = footer.getBoundingClientRect().top;
-  // const homeFooterTop = homeFooter.getBoundingClientRect().top;
 
   if (sectionTop <= navbar.offsetHeight) {
     navbar.classList.add("nav_bg_changed");
@@ -80,27 +69,144 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.style.position = "sticky";
   }
+});
 
+const q1 = document.getElementById("q1");
+const q2 = document.getElementById("q2");
+const q3 = document.getElementById("q3");
+const q4 = document.getElementById("q4");
+const mq1 = document.getElementById("mq1");
+const mq2 = document.getElementById("mq2");
+const mq3 = document.getElementById("mq3");
+const mq4 = document.getElementById("mq4");
+
+const feedbackForm = document.querySelector(".feedback-form");
+const answerForm = document.querySelector(".answer-form");
+
+
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+const answerFaq = document.getElementById("answer-faq");
+const mobileFaq = document.getElementById("m-answer-faq");
+const mobileAnswerForm = document.querySelector('.mobile-answer-form');
+const mobileFeedbackForm = document.querySelector('.mobile-feedback-form')
+
+q1.addEventListener("click", () => {
+  answerFaq.innerHTML = `TS Bridge Edu is a community where you can learn skills, network with smart people, and find work.
+  Join the WhatsApp Community to find all these opportunities.`;
+  if (!feedbackForm.classList.contains("hidden")) {
+    feedbackForm.classList.add("hidden");
+  }
+  if (feedbackForm.classList.contains("hidden")) {
+    answerForm.classList.remove("hidden");
+  }
+});
+
+mq1.addEventListener("click", () => {
+  mobileFaq.innerHTML = `TS Bridge Edu is a community where you can learn skills, network with smart people, and find work.
+  Join the WhatsApp Community to find all these opportunities.`;
+  if (!mobileFeedbackForm.classList.contains("hidden")) {
+    mobileFeedbackForm.classList.add("hidden");
+  }
+
+  if (mobileFeedbackForm.classList.contains("hidden")) {
+    mobileAnswerForm.classList.remove("hidden");
+  }
+});
+
+q2.addEventListener("click", () => {
+  answerFaq.innerHTML = `No TS Bridge Edu is completely free.`;
+  if (!feedbackForm.classList.contains("hidden")) {
+    feedbackForm.classList.add("hidden");
+  }
+
+  if (feedbackForm.classList.contains("hidden")) {
+    answerForm.classList.remove("hidden");
+  }
+});
+
+
+mq2.addEventListener("click", () => {
+  mobileFaq.innerHTML = `No TS Bridge Edu is completely free.`;
+
+  if (!mobileFeedbackForm.classList.contains("hidden")) {
+    mobileFeedbackForm.classList.add("hidden");
+  }
+
+  if (mobileFeedbackForm.classList.contains("hidden")) {
+    mobileAnswerForm.classList.remove("hidden");
+  }
+});
+
+q3.addEventListener("click", () => {
+  answerFaq.innerHTML = `It's simple. Join our WhatsApp Community. Fill the internship form as per your skills and interest. Have a screening session. Congrats!`;
+  if (!feedbackForm.classList.contains("hidden")) {
+    feedbackForm.classList.add("hidden");
+  }
+
+  if (feedbackForm.classList.contains("hidden")) {
+    answerForm.classList.remove("hidden");
+  }
+});
+
+mq3.addEventListener("click", () => {
+  mobileFaq.innerHTML = `It's simple. Join our WhatsApp Community. Fill the internship form as per your skills and interest. Have a screening session. Congrats!`;
+  if (!mobileFeedbackForm.classList.contains("hidden")) {
+    mobileFeedbackForm.classList.add("hidden");
+  }
+
+  if (mobileFeedbackForm.classList.contains("hidden")) {
+    mobileAnswerForm.classList.remove("hidden");
+  }
+
+});
+
+
+q4.addEventListener("click", () => {
+  answerFaq.innerHTML = `It's simple. Fill the requirement form.`;
+  if (!feedbackForm.classList.contains("hidden")) {
+    feedbackForm.classList.add("hidden");
+  }
+
+  if (feedbackForm.classList.contains("hidden")) {
+    answerForm.classList.remove("hidden");
+  }
+});
+
+mq4.addEventListener("click", () => {
+  mobileFaq.innerHTML = `It's simple. Fill the requirement form.`;
+
+  if (!mobileFeedbackForm.classList.contains("hidden")) {
+    mobileFeedbackForm.classList.add("hidden");
+  }
+
+  if (mobileFeedbackForm.classList.contains("hidden")) {
+    mobileAnswerForm.classList.remove("hidden");
+  }
+});
+
+
+document.getElementById("q5").addEventListener("click", function () {
+  feedbackForm.classList.toggle("hidden");
+  if (!feedbackForm.classList.contains("hidden")) {
+    answerForm.classList.toggle("hidden");
+  }
+});
+
+document.getElementById("mq5").addEventListener("click", function () {
+  
+  mobileFeedbackForm.classList.toggle("hidden");
+  if (!mobileFeedbackForm.classList.contains("hidden")) {
+    mobileAnswerForm.classList.toggle("hidden");
+  }
 });
 
 
 
 
-const q1 = document.getElementById('q1');
-const q2 = document.getElementById('q2');
-const q3 = document.getElementById('q3');
-const q4 = document.getElementById('q4');
-
-
-const  answerFaq = document.getElementById('answer-faq');
-
-q1.addEventListener('click', ()=> {
-  answerFaq.innerHTML = `Bluelearn is a community where you can learn skills, network with smart people, and find work.
-  Join the WhatsApp Community to find all these opportunities.`
-})
-q2.addEventListener('click', ()=> {
-  answerFaq.innerHTML = `No TS Bridge Edu is completely free.`
-})
-q3.addEventListener('click', ()=> {
-  answerFaq.innerHTML = `It's simple. Join our WhatsApp Community. Fill the internship form as per your skills and interest. Have a screening session. Congrats!`
-})
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    faqQuestions.forEach((q) => q.classList.remove("active"));
+    question.classList.add("active");
+  });
+});
