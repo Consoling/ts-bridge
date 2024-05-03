@@ -28,17 +28,29 @@ const openModal = document.querySelectorAll(".modal-open");
 
 openModal.forEach(function (card) {
   card.onclick = function () {
-    var modal = card.getAttribute("data-modal");
+    // var modal = card.getAttribute("data-modal");
+    var modalId = card.getAttribute("data-modal");
+    var modal = document.getElementById(modalId);
+    modal.classList.add("show");
 
     document.getElementById(modal).style.display = "block";
   };
 });
 
+// const closeBtn = document.querySelectorAll(".modal-close");
+
+// closeBtn.forEach(function (btn) {
+//   btn.onclick = function () {
+//     var modal = (btn.closest(".modal").style.display = "none");
+//   };
+// });
+
 const closeBtn = document.querySelectorAll(".modal-close");
 
 closeBtn.forEach(function (btn) {
   btn.onclick = function () {
-    var modal = (btn.closest(".modal").style.display = "none");
+    var modal = btn.closest(".modal");
+    modal.classList.remove("show"); // Remove show class to hide the modal
   };
 });
 
@@ -48,12 +60,12 @@ window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   const sectionTs = document.getElementById("sectionTs");
   const footer = document.querySelector("footer");
-  const homeNavbar = document.getElementById("homeNavbar");
-  const homeFooter = document.getElementById("homeFooter");
+  // const homeNavbar = document.getElementById("homeNavbar");
+  // const homeFooter = document.getElementById("homeFooter");
 
   const sectionTop = sectionTs.getBoundingClientRect().top;
   const footerTop = footer.getBoundingClientRect().top;
-  const homeFooterTop = homeFooter.getBoundingClientRect().top;
+  // const homeFooterTop = homeFooter.getBoundingClientRect().top;
 
   if (sectionTop <= navbar.offsetHeight) {
     navbar.classList.add("nav_bg_changed");
@@ -69,9 +81,26 @@ window.addEventListener("scroll", function () {
     navbar.style.position = "sticky";
   }
 
-  if (homeFooterTop <= homeNavbar.offsetHeight) {
-    homeNavbar.style.position = "";
-  } else {
-    homeNavbar.style.position = "sticky";
-  }
 });
+
+
+
+
+const q1 = document.getElementById('q1');
+const q2 = document.getElementById('q2');
+const q3 = document.getElementById('q3');
+const q4 = document.getElementById('q4');
+
+
+const  answerFaq = document.getElementById('answer-faq');
+
+q1.addEventListener('click', ()=> {
+  answerFaq.innerHTML = `Bluelearn is a community where you can learn skills, network with smart people, and find work.
+  Join the WhatsApp Community to find all these opportunities.`
+})
+q2.addEventListener('click', ()=> {
+  answerFaq.innerHTML = `No TS Bridge Edu is completely free.`
+})
+q3.addEventListener('click', ()=> {
+  answerFaq.innerHTML = `It's simple. Join our WhatsApp Community. Fill the internship form as per your skills and interest. Have a screening session. Congrats!`
+})

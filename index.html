@@ -349,7 +349,7 @@
         <h1>Explore the Programs</h1>
       </div>
       <div class="explore_prog_cards">
-        <div class="explore_prog_card items-center modal-open" data-modal="modal-1">
+        <div class="explore_prog_card items-center modal-open transition-all duration-300 ease-out" data-modal="modal-1">
           <img class="w-15 h-20" src="/media/image.jpg" alt="" />
           <h3 class="text-white font-bold mt-6 text-lg">Marketing</h3>
           <p class="text-white font-semibold text-sm">See Program-></p>
@@ -389,19 +389,19 @@
 
         <!-- modal -->
 
-        <div class="modal shadow-md shadow-black/90 ring-1 hidden" id="modal-1">
+        <div class="modal shadow-md shadow-black/90 ring-1 hidden transition-all duration-300 ease-out" id="modal-1">
           <div class="modal-heading">
-            <h1>Marketing</h1>
-            <i class="fa-solid fa-xmark modal-close" ></i>
+            <h1 id="modal-title">Marketing</h1>
+            <i class="fa-solid fa-xmark cursor-pointer modal-close" ></i>
           </div>
           <hr/>
           <div class="modal-content">
-            <h1>What's included in the program ?</h1>
+            <h1 id="modal-description">What's included in the program ?</h1>
             <ul>
-              <li>Fundamentals of Digital Marketing</li>
-              <li>SEO Fundamentals</li>
-              <li>Social Media Marketing</li>
-              <li>Marketing Automation</li>
+              <li id="modal-feature1">Fundamentals of Digital Marketing</li>
+              <li id="modal-feature2">SEO Fundamentals</li>
+              <li id="modal-feature3">Social Media Marketing</li>
+              <li id="modal-feature4">Marketing Automation</li>
             </ul>
           </div>
           <button>See Details <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
@@ -426,11 +426,13 @@
         <div class="flex flex-1 flex-col items-start gap-4">
           <h3 class="text-3xl font-bold">FAQs</h3>
           <div
+          id="q1"
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-full px-2 py-1 transition duration-300 md:rounded-2xl md:px-4 md:py-4 border border-gray-300 bg-gray-50"
           >
             What exactly is TS Bridge Edu?
           </div>
           <div
+          id="q2"
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-full px-2 py-1 transition duration-300 md:rounded-2xl md:px-4 md:py-4 bg-gray-900 text-gray-50 shadow-bl"
           >
             Do I have to pay for something?<svg
@@ -444,9 +446,10 @@
             </svg>
           </div>
           <div
+          id="q3"
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-full px-2 py-1 transition duration-300 md:rounded-2xl md:px-4 md:py-4 border border-gray-300 bg-gray-50"
           >
-            How to find work on bluelearn?
+            How to find opportunities on TS Bridge?
           </div>
           <div
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-full px-2 py-1 transition duration-300 md:rounded-2xl md:px-4 md:py-4 border border-gray-300 bg-gray-50"
@@ -475,7 +478,7 @@
                 <rect width="16" height="16" rx="8" fill="white"></rect>
               </svg>
             </div>
-            <p class="min-h-[172px] w-full">No. TS Bridge Edu is 100% free.</p>
+            <p class="min-h-[172px] w-full" id="answer-faq">No. TS Bridge Edu is 100% free.</p>
           </div>
         </div>
       </div>
@@ -483,11 +486,13 @@
         <div class="flex flex-1 flex-col items-start gap-4">
           <h3 class="text-3xl font-bold">FAQs</h3>
           <div
+          id="q1"
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-xl px-4 py-3 transition duration-300 border border-gray-300 bg-gray-50"
           >
             What exactly is TS Bridge Edu?
           </div>
-          <div
+          <div  
+          id="q2"
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-xl px-4 py-3 transition duration-300 bg-gray-900 text-gray-50 shadow-bl"
           >
             Do I have to pay for something?<svg
@@ -504,15 +509,18 @@
             </svg>
           </div>
           <div
-            class="flex w-full flex-col gap-4 rounded-3xl bg-yellow-400 px-3 py-4 shadow-brutal"
+          
+            class="flex w-full flex-col gap-4 rounded-3xl bg-yellow-400 px-3 py-4 shadow-xl"
             style="opacity: 0; transform: scaleY(0) translateZ(0)"
           >
-            <p class="min-h-[100px]">No. TS Bridge Edu is 100% free.</p>
+            <p 
+            id="answer-faq"
+            class="min-h-[100px]">No. TS Bridge Edu is 100% free.</p>
           </div>
           <div
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-xl px-4 py-3 transition duration-300 border border-gray-300 bg-gray-50"
           >
-            How to find work on bluelearn?
+            How to find opportunities on TS Bridge Edu?
           </div>
           <div
             class="flex w-full shrink-0 cursor-pointer select-none items-center justify-between gap-2 rounded-xl px-4 py-3 transition duration-300 border border-gray-300 bg-gray-50"
@@ -651,7 +659,7 @@
             <h4 class="font-semibold text-[#0e90dd]">COMPANY</h4>
             <ul class="mt-4 w-fit space-y-3">
               <li class="cursor-pointer underline-offset-2 hover:underline">
-                About us
+                <a href="about.html">About us</a>
               </li>
               <li class="cursor-pointer underline-offset-2 hover:underline">
                 Privacy policy
