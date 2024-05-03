@@ -1,9 +1,6 @@
 const dropdownBtn = document.getElementById("nav__dpdn_btn");
 const dropdownElmnts = document.getElementById("nav_dpdn_elmnts_active");
 
-const abtDropdwnbtn = document.getElementById("abt-dropdwn-btn");
-const abtDropdwnElmnts = document.getElementById('abt-dropdwn-elmnts');
-
 const cards = [
   {
     title: "Marketing",
@@ -77,7 +74,8 @@ const cards = [
   },
 ];
 
-const exploreProgCards = document.getElementById("exploreProgCards"); //Card container
+if(window.location.pathname === '/') {
+  const exploreProgCards = document.getElementById("exploreProgCards"); //Card container
 
 cards.forEach((card, index) => {
   //Card Mapping
@@ -156,9 +154,12 @@ cards.forEach((card, index) => {
   modal.appendChild(modalContent);
   modal.appendChild(button);
 
-  exploreProgCards.appendChild(exploreProgCard);
-  exploreProgCards.appendChild(modal);
+  
+    exploreProgCards.appendChild(exploreProgCard);
+    exploreProgCards.appendChild(modal);
+  
 });
+}
 
 dropdownBtn.addEventListener("click", () => {
   dropdownElmnts.classList.toggle("active");
@@ -359,6 +360,3 @@ faqQuestions.forEach((question) => {
     question.classList.add("active");
   });
 });
-
-
-
