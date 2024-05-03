@@ -408,3 +408,87 @@ h6 {
 .modal>button>i{
   padding-left: 8px;
 }
+
+#projects_sec{
+  /* border: 5px solid black; */
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+#project_sec_container{
+  margin: 3rem 5rem;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+
+.project_container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects_main_box{
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.project_box{
+  border: 0.5px solid rgba(169, 169, 222, 0.833);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-content: center;
+  padding: 1.1rem 2rem;
+  text-align: center;
+  width: 25rem;
+  border-radius: 10px;
+} 
+
+.courses{
+  text-align: start;
+  gap: 0.7rem;
+}
+.courses>p{
+  font-size: 14px;
+}
+.courses_skills{
+  display: flex;
+  gap: 9px;
+}
+.courses_skills>button{
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  background-color: #f1f1f4;
+  border-radius: 6px;
+}
+
+.project_container>h1{
+  font-size: 24px;
+  font-weight: 700;
+}
+.project_box>h1{
+  font-size: 20px;
+  font-weight: 600;
+}
+.project_box>h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.explore_courses{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
