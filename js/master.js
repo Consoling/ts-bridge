@@ -356,3 +356,6 @@ faqQuestions.forEach((question) => {
     question.classList.add("active");
   });
 });
+
+
+
