@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreProgCard.addEventListener("click", () => {
         // Show the modal
 
-        alert('listening')
+        
         modal.classList.add("show");
 
         const viewportHeight = window.innerHeight;
