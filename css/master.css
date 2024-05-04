@@ -164,23 +164,32 @@ h6 {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(14, 144, 221, 1) 100%
+  );
+  padding: 100px;
+  border-radius: 20px;
   position: relative;
 }
 .explore_prog_card {
   z-index: 1;
   grid-row-gap: 20px;
-  box-shadow: 2px 2px 0 0 white, 3px 3px 0 1px;
+  box-shadow: 2px 2px 0 0 #030a21, 3px 3px 0 1px;
   color: var(--white);
-  background-color: #030a21;
+  background-color: #fff;
+  
   border-radius: 1rem;
   flex-direction: column;
-  width: 250px;
-  max-width: 250px;
+  width: 300px;
+  max-width: 300px;
   padding: 2rem;
   transition: all 0.3s;
   display: flex;
   position: relative;
-  height: 250px;
+  height: 300px;
   margin-bottom: 20px;
 }
 .explore_prog_card:hover {
@@ -196,6 +205,7 @@ h6 {
   .explore_prog_cards {
     flex-direction: column;
     align-items: center;
+    /* padding: 30px 0 30px 0; */
   }
 
   .page-padding2 {
@@ -212,7 +222,7 @@ h6 {
 
 @media (max-width: 1024px) {
   .explore_prog_cards {
-    padding: 0px 30px;
+    padding: 50px 30px;
   }
 }
 
@@ -304,6 +314,28 @@ h6 {
 }
 
 
+.ts_crs_btn {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(14, 144, 221, 1) 100%
+  );
+  margin-bottom: 10px;
+  transition:all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+
+.ts_crs_btn:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    80deg,
+    rgba(14, 144, 221, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 
 
 .about-heading {
@@ -351,8 +383,7 @@ h6 {
     max-width: none;
   }
 
-  .is-right {
-  }
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -372,9 +403,13 @@ h6 {
   padding: 2rem;
   /* border: 4px solid yellow; */
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   background-color: white;
-  top: 0%;
+  top: 30%;
+  /* bottom: 0; */
+  /* right: 0%; */
+  left:10%;
+  margin-top: 150px;
   border-radius: 10px;
   /* display: none; */
 }

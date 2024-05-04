@@ -5,6 +5,8 @@ const cards = [
   {
     title: "Marketing",
     description: "What's included in the program ?",
+    img: '/media/course-1.jpg',
+    
     features: [
       "Fundamentals of Digital Marketing",
       "SEO Fundamentals",
@@ -15,6 +17,7 @@ const cards = [
   {
     title: "Ethical Hacking",
     description: "What's included in the program ?",
+    img: '/media/course-2.jpg',
     features: [
       "Ethical Hacking Basics",
       "Network Security",
@@ -25,6 +28,7 @@ const cards = [
   {
     title: "Node Development",
     description: "What's included in the program ?",
+    img: '/media/course-3.jpg',
     features: [
       "Node.js Basics",
       "Express.js",
@@ -35,6 +39,7 @@ const cards = [
   {
     title: "React",
     description: "What's included in the program ?",
+    img: '/media/course-4.jpg',
     features: [
       "React Basics",
       "State Management with Redux",
@@ -45,6 +50,7 @@ const cards = [
   {
     title: "Frontend",
     description: "What's included in the program ?",
+    img: '/media/course-5.jpg',
     features: [
       "HTML5 and CSS3",
       "Responsive Web Design",
@@ -55,6 +61,7 @@ const cards = [
   {
     title: "Project Management",
     description: "What's included in the program ?",
+    img: '/media/course-6.jpg',
     features: [
       "Project Planning",
       "Risk Management",
@@ -65,6 +72,7 @@ const cards = [
   {
     title: "Photography",
     description: "What's included in the program ?",
+    img: '/media/course-7.jpg',
     features: [
       "Understanding Camera Settings",
       "Composition Techniques",
@@ -74,92 +82,201 @@ const cards = [
   },
 ];
 
-if(window.location.pathname === '/') {
-  const exploreProgCards = document.getElementById("exploreProgCards"); //Card container
+// if(window.location.pathname === '/' || '/index.html') {
+//   const exploreProgCards = document.getElementById("exploreProgCards"); //Card container
 
-cards.forEach((card, index) => {
-  //Card Mapping
-  const exploreProgCard = document.createElement("div");
-  exploreProgCard.className =
-    "explore_prog_card items-center modal-open transition-all duration-300 ease-out";
-  exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
+// cards.forEach((card, index) => {
+//   //Card Mapping
+//   const exploreProgCard = document.createElement("div");
+//   exploreProgCard.className =
+//     "explore_prog_card items-center modal-open transition-all duration-300 ease-out";
+//   exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
 
-  const img = document.createElement("img");
-  img.className = "w-15 h-20";
-  img.src = `/media/image.jpg`;
-  img.alt = "";
+//   const img = document.createElement("img");
+//   img.className = "w-15 h-20";
+//   img.src = `/media/image.jpg`;
+//   img.alt = "";
 
-  const title = document.createElement("h3");
-  title.className = "text-white font-bold mt-6 text-lg";
-  title.textContent = card.title;
+//   const title = document.createElement("h3");
+//   title.className = "text-white font-bold mt-6 text-lg";
+//   title.textContent = card.title;
 
-  const description = document.createElement("p");
-  description.className = "text-white font-semibold text-sm";
-  description.textContent = "See Program->";
+//   const description = document.createElement("p");
+//   description.className = "text-white font-semibold text-sm";
+//   description.textContent = "See Program->";
 
-  exploreProgCard.appendChild(img);
-  exploreProgCard.appendChild(title);
-  exploreProgCard.appendChild(description);
+//   exploreProgCard.appendChild(img);
+//   exploreProgCard.appendChild(title);
+//   exploreProgCard.appendChild(description);
 
-  const modal = document.createElement("div");
-  modal.className =
-    "modal shadow-md shadow-black/90 ring-1 hidden transition-all duration-300 ease-out";
-  modal.id = `modal-${index + 1}`;
+//   const modal = document.createElement("div");
+//   modal.className =
+//     "modal shadow-md shadow-black/90 ring-1 hidden transition-all duration-300 ease-out";
+//   modal.id = `modal-${index + 1}`;
 
-  const modalHeading = document.createElement("div");
-  modalHeading.className = "modal-heading";
+//   const modalHeading = document.createElement("div");
+//   modalHeading.className = "modal-heading";
 
-  const modalTitle = document.createElement("h1");
-  modalTitle.id = `modal-title-${index + 1}`;
-  modalTitle.textContent = card.title;
+//   const modalTitle = document.createElement("h1");
+//   modalTitle.id = `modal-title-${index + 1}`;
+//   modalTitle.textContent = card.title;
 
-  const modalClose = document.createElement("i");
-  modalClose.className = "fa-solid fa-xmark cursor-pointer modal-close";
+//   const modalClose = document.createElement("i");
+//   modalClose.className = "fa-solid fa-xmark cursor-pointer modal-close";
 
-  const hr = document.createElement("hr");
+//   const hr = document.createElement("hr");
 
-  const modalContent = document.createElement("div");
-  modalContent.className = "modal-content";
+//   const modalContent = document.createElement("div");
+//   modalContent.className = "modal-content";
 
-  const modalDescription = document.createElement("h1");
-  modalDescription.id = `modal-description-${index + 1}`;
-  modalDescription.textContent = card.description;
+//   const modalDescription = document.createElement("h1");
+//   modalDescription.id = `modal-description-${index + 1}`;
+//   modalDescription.textContent = card.description;
 
-  const ul = document.createElement("ul");
+//   const ul = document.createElement("ul");
 
-  card.features.forEach((feature, i) => {
-    const li = document.createElement("li");
-    li.id = `modal-feature${i + 1}-${index + 1}`;
-    li.textContent = feature;
-    ul.appendChild(li);
-  });
+//   card.features.forEach((feature, i) => {
+//     const li = document.createElement("li");
+//     li.id = `modal-feature${i + 1}-${index + 1}`;
+//     li.textContent = feature;
+//     ul.appendChild(li);
+//   });
 
-  modalContent.appendChild(modalDescription);
-  modalContent.appendChild(ul);
+//   modalContent.appendChild(modalDescription);
+//   modalContent.appendChild(ul);
 
-  const button = document.createElement("button");
-  const a = document.createElement("a");
-  a.href = "/courses.html";
-  a.className = "underline-none";
-  a.textContent = "See Details ";
-  const i = document.createElement("i");
-  i.className = "fa-solid fa-arrow-up-right-from-square";
-  a.appendChild(i);
-  button.appendChild(a);
+//   const button = document.createElement("button");
+//   const a = document.createElement("a");
+//   a.href = "/courses.html";
+//   a.className = "underline-none";
+//   a.textContent = "See Details ";
+//   const i = document.createElement("i");
+//   i.className = "fa-solid fa-arrow-up-right-from-square";
+//   a.appendChild(i);
+//   button.appendChild(a);
 
-  modal.appendChild(modalHeading);
-  modalHeading.appendChild(modalTitle);
-  modalHeading.appendChild(modalClose);
-  modal.appendChild(hr);
-  modal.appendChild(modalContent);
-  modal.appendChild(button);
+//   modal.appendChild(modalHeading);
+//   modalHeading.appendChild(modalTitle);
+//   modalHeading.appendChild(modalClose);
+//   modal.appendChild(hr);
+//   modal.appendChild(modalContent);
+//   modal.appendChild(button);
 
-  
-    exploreProgCards.appendChild(exploreProgCard);
-    exploreProgCards.appendChild(modal);
-  
+//     exploreProgCards.appendChild(exploreProgCard);
+//     exploreProgCards.appendChild(modal);
+
+// });
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (window.location.pathname === "/" || "/index.html") {
+    const exploreProgCards = document.getElementById("exploreProgCards"); // Card container
+
+    cards.forEach((card, index) => {
+      // Card Mapping
+      const exploreProgCard = document.createElement("div");
+      exploreProgCard.className =
+        "explore_prog_card items-center modal-open transition-all duration-300 ease-out";
+      exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
+
+      const img = document.createElement("img");
+      img.className = "w-full h-32 object-contain";
+      img.src = card.img;
+      img.alt = "";
+
+      const title = document.createElement("h3");
+      title.className = "text-[#0c2e7a] font-bold mt-6 text-xl";
+      title.textContent = card.title;
+
+      const description = document.createElement("button");
+      description.className = "text-[#fff] py-2 px-3 ts_crs_btn  font-medium rounded-md text-sm";
+      description.textContent = "See Program->";
+
+      exploreProgCard.appendChild(img);
+      exploreProgCard.appendChild(title);
+      exploreProgCard.appendChild(description);
+
+      const modal = document.createElement("div");
+      modal.className =
+        "modal shadow-md shadow-black/90 ring-1 hidden transition-all duration-300 ease-out";
+      modal.id = `modal-${index + 1}`;
+
+      const modalHeading = document.createElement("div");
+      modalHeading.className = "modal-heading";
+
+      const modalTitle = document.createElement("h1");
+      modalTitle.id = `modal-title-${index + 1}`;
+      modalTitle.textContent = card.title;
+
+      const modalClose = document.createElement("i");
+      modalClose.className = "fa-solid fa-xmark cursor-pointer modal-close";
+
+      const hr = document.createElement("hr");
+
+      const modalContent = document.createElement("div");
+      modalContent.className = "modal-content";
+
+      const modalDescription = document.createElement("h1");
+      modalDescription.id = `modal-description-${index + 1}`;
+      modalDescription.textContent = card.description;
+
+      const ul = document.createElement("ul");
+
+      card.features.forEach((feature, i) => {
+        const li = document.createElement("li");
+        li.id = `modal-feature${i + 1}-${index + 1}`;
+        li.textContent = feature;
+        ul.appendChild(li);
+      });
+
+      modalContent.appendChild(modalDescription);
+      modalContent.appendChild(ul);
+
+      const button = document.createElement("button");
+      const a = document.createElement("a");
+      a.href = "/courses.html";
+      a.className = "underline-none";
+      a.textContent = "See Details ";
+      const i = document.createElement("i");
+      i.className = "fa-solid fa-arrow-up-right-from-square";
+      a.appendChild(i);
+      button.appendChild(a);
+
+      modal.appendChild(modalHeading);
+      modalHeading.appendChild(modalTitle);
+      modalHeading.appendChild(modalClose);
+      modal.appendChild(hr);
+      modal.appendChild(modalContent);
+      modal.appendChild(button);
+
+      exploreProgCards.appendChild(exploreProgCard);
+      document.body.appendChild(modal);
+
+      exploreProgCard.addEventListener("click", () => {
+        // Show the modal
+
+        alert('listening')
+        modal.classList.add("show");
+
+        const viewportHeight = window.innerHeight;
+        const modalHeight = modal.clientHeight;
+        const cardRect = exploreProgCard.getBoundingClientRect();
+        let modalTop = cardRect.top + window.pageYOffset + cardRect.height + 10;
+
+        if (modalTop + modalHeight > viewportHeight) {
+          modalTop = viewportHeight - modalHeight - 10;
+        }
+
+        modal.style.top = `${Math.max(window.pageYOffset, modalTop)}px`;
+      });
+
+      modalClose.addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+    });
+  }
 });
-}
 
 dropdownBtn.addEventListener("click", () => {
   dropdownElmnts.classList.toggle("active");
@@ -210,25 +327,30 @@ moveImagesTowardsCursor();
 
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
-  const sectionTs = document.getElementById("sectionTs");
   const footer = document.querySelector("footer");
 
-  const sectionTop = sectionTs.getBoundingClientRect().top;
+
+    const sectionTs = document.getElementById("sectionTs");
+
+    const sectionTop = sectionTs?.getBoundingClientRect().top;
+
+    if (sectionTop <= navbar?.offsetHeight) {
+      navbar.classList.add("nav_bg_changed");
+      navbar.classList.remove("navbar__main");
+    } else {
+      navbar?.classList?.remove("nav_bg_changed");
+      navbar?.classList?.add("navbar__main");
+    }
+  
   const footerTop = footer.getBoundingClientRect().top;
 
-  if (sectionTop <= navbar.offsetHeight) {
-    navbar.classList.add("nav_bg_changed");
-    navbar.classList.remove("navbar__main");
-  } else {
-    navbar.classList.remove("nav_bg_changed");
-    navbar.classList.add("navbar__main");
-  }
-
-  if (footerTop <= navbar.offsetHeight) {
+if(navbar){
+  if (footerTop <= navbar?.offsetHeight) {
     navbar.style.position = "";
   } else {
     navbar.style.position = "sticky";
   }
+}
 });
 
 const q1 = document.getElementById("q1");
