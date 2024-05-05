@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Card Mapping
       const exploreProgCard = document.createElement("div");
       exploreProgCard.className =
-        "explore_prog_card backdrop-blur-md  items-center modal-open transition-all duration-300 ease-out";
+        "explore_prog_card backdrop-blur-md bg-[#fff]/100  items-center modal-open transition-all duration-300 ease-out";
       exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
 
       const img = document.createElement("img");
