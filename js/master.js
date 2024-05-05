@@ -5,8 +5,8 @@ const cards = [
   {
     title: "Marketing",
     description: "What's included in the program ?",
-    img: '/media/course-1.jpg',
-    
+    img: "/media/course-1.jpg",
+
     features: [
       "Fundamentals of Digital Marketing",
       "SEO Fundamentals",
@@ -17,7 +17,7 @@ const cards = [
   {
     title: "Ethical Hacking",
     description: "What's included in the program ?",
-    img: '/media/course-2.jpg',
+    img: "/media/course-2.jpg",
     features: [
       "Ethical Hacking Basics",
       "Network Security",
@@ -28,7 +28,7 @@ const cards = [
   {
     title: "Node Development",
     description: "What's included in the program ?",
-    img: '/media/course-3.jpg',
+    img: "/media/course-3.jpg",
     features: [
       "Node.js Basics",
       "Express.js",
@@ -39,7 +39,7 @@ const cards = [
   {
     title: "React",
     description: "What's included in the program ?",
-    img: '/media/course-4.jpg',
+    img: "/media/course-4.jpg",
     features: [
       "React Basics",
       "State Management with Redux",
@@ -50,7 +50,7 @@ const cards = [
   {
     title: "Frontend",
     description: "What's included in the program ?",
-    img: '/media/course-5.jpg',
+    img: "/media/course-5.jpg",
     features: [
       "HTML5 and CSS3",
       "Responsive Web Design",
@@ -61,7 +61,7 @@ const cards = [
   {
     title: "Project Management",
     description: "What's included in the program ?",
-    img: '/media/course-6.jpg',
+    img: "/media/course-6.jpg",
     features: [
       "Project Planning",
       "Risk Management",
@@ -72,7 +72,7 @@ const cards = [
   {
     title: "Photography",
     description: "What's included in the program ?",
-    img: '/media/course-7.jpg',
+    img: "/media/course-7.jpg",
     features: [
       "Understanding Camera Settings",
       "Composition Techniques",
@@ -169,7 +169,6 @@ const cards = [
 // }
 
 document.addEventListener("DOMContentLoaded", () => {
-
   if (window.location.pathname === "/" || "/index.html") {
     const exploreProgCards = document.getElementById("exploreProgCards"); // Card container
 
@@ -177,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Card Mapping
       const exploreProgCard = document.createElement("div");
       exploreProgCard.className =
-        "explore_prog_card items-center modal-open transition-all duration-300 ease-out";
+        "explore_prog_card backdrop-blur-md  items-center modal-open transition-all duration-300 ease-out";
       exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
 
       const img = document.createElement("img");
@@ -190,7 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
       title.textContent = card.title;
 
       const description = document.createElement("button");
-      description.className = "text-[#fff] py-2 px-3 ts_crs_btn  font-medium rounded-md text-sm";
+      description.className =
+        "text-[#fff] py-2 px-3 ts_crs_btn  font-medium rounded-md text-sm";
       description.textContent = "See Program->";
 
       exploreProgCard.appendChild(img);
@@ -256,7 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreProgCard.addEventListener("click", () => {
         // Show the modal
 
-        
         modal.classList.add("show");
 
         const viewportHeight = window.innerHeight;
@@ -329,28 +328,27 @@ window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   const footer = document.querySelector("footer");
 
+  const sectionTs = document.getElementById("sectionTs");
 
-    const sectionTs = document.getElementById("sectionTs");
+  const sectionTop = sectionTs?.getBoundingClientRect().top;
 
-    const sectionTop = sectionTs?.getBoundingClientRect().top;
+  if (sectionTop <= navbar?.offsetHeight) {
+    navbar.classList.add("nav_bg_changed");
+    navbar.classList.remove("navbar__main");
+  } else {
+    navbar?.classList?.remove("nav_bg_changed");
+    navbar?.classList?.add("navbar__main");
+  }
 
-    if (sectionTop <= navbar?.offsetHeight) {
-      navbar.classList.add("nav_bg_changed");
-      navbar.classList.remove("navbar__main");
-    } else {
-      navbar?.classList?.remove("nav_bg_changed");
-      navbar?.classList?.add("navbar__main");
-    }
-  
   const footerTop = footer.getBoundingClientRect().top;
 
-if(navbar){
-  if (footerTop <= navbar?.offsetHeight) {
-    navbar.style.position = "";
-  } else {
-    navbar.style.position = "sticky";
+  if (navbar) {
+    if (footerTop <= navbar?.offsetHeight) {
+      navbar.style.position = "";
+    } else {
+      navbar.style.position = "sticky";
+    }
   }
-}
 });
 
 const q1 = document.getElementById("q1");
@@ -482,3 +480,42 @@ faqQuestions.forEach((question) => {
     question.classList.add("active");
   });
 });
+
+if (window.location.pathname === "/" || "index.html") {
+  var counterTriggered = false;
+
+  window.addEventListener("scroll", () => {
+    var statsSection = document.getElementById("stats_sctn");
+    var position = statsSection.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (position < screenHeight && !counterTriggered) {
+      startCounter();
+      counterTriggered = true;
+    }
+  });
+
+  const startCounter = () => {
+    var counters = document.querySelectorAll('[id^="stats_cntr_"]');
+    var targets = [50, 1000, 30, 70]; // Specify the target values here
+    var speed = 200; // Speed of counting in milliseconds
+  
+    counters.forEach(function(counter, index) {
+      var target = targets[index];
+      var count = 0;
+      var interval = target / speed;
+  
+      var updateCount = function() {
+        count += interval;
+        counter.innerText = Math.floor(count);
+        if (count < target) {
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target + '+';
+        }
+      };
+  
+      updateCount();
+    });
+  };
+}
