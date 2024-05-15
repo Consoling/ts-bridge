@@ -45,10 +45,10 @@ h6 {
   font-family: "Inter", sans-serif;
 }
 
-*::-webkit-scrollbar,
+/* *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 0 !important;
-}
+} */
 
 @keyframes slideDown {
   0% {
