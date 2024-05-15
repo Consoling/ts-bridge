@@ -78,7 +78,8 @@ const nonTch = [
 document.addEventListener("DOMContentLoaded", () => {
   if (
     window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
+    window.location.pathname === "/index.html" ||
+    window.location.pathname === '/courses.html'
   ) {
     const exploreProgCards = document.getElementById("exploreProgCards"); // Card container
 
@@ -190,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   if (
     window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
+    window.location.pathname === "/index.html" ||
+    window.location.pathname === '/courses.html'
   ) {
     const nonTchCards = document.getElementById("nonTchCrds");
 
