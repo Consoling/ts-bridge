@@ -3,15 +3,14 @@ const dropdownElmnts = document.getElementById("nav_dpdn_elmnts_active");
 
 const cards = [
   {
-    title: "Marketing",
-    description: "What's included in the program ?",
-    img: "/media/course-1.jpg",
-
+    title: "Data Analytics",
+    description: "What's included in the program?",
+    img: "/media/course-4.jpg",
     features: [
-      "Fundamentals of Digital Marketing",
-      "SEO Fundamentals",
-      "Social Media Marketing",
-      "Marketing Automation",
+      "Data Collection and Cleaning",
+      "Statistical Analysis",
+      "Data Visualization",
+      "Machine Learning Techniques",
     ],
   },
   {
@@ -26,7 +25,7 @@ const cards = [
     ],
   },
   {
-    title: "Node Development",
+    title: "Full Stack Development",
     description: "What's included in the program ?",
     img: "/media/course-3.jpg",
     features: [
@@ -34,50 +33,44 @@ const cards = [
       "Express.js",
       "RESTful APIs",
       "MongoDB Integration",
+      "React with Redux, Hooks, Routers",
     ],
   },
+];
+
+const nonTch = [
   {
-    title: "React",
-    description: "What's included in the program ?",
-    img: "/media/course-4.jpg",
+    title: "Digital Marketing",
+    description: "What's included in the program?",
+    img: "/media/course-8.jpg",
     features: [
-      "React Basics",
-      "State Management with Redux",
-      "React Router",
-      "Hooks and Context API",
+      "Search Engine Optimization (SEO)",
+      "Social Media Marketing",
+      "Content Strategy",
+      "Digital Analytics",
     ],
   },
+
   {
-    title: "Frontend",
-    description: "What's included in the program ?",
-    img: "/media/course-5.jpg",
-    features: [
-      "HTML5 and CSS3",
-      "Responsive Web Design",
-      "JavaScript Fundamentals",
-      "CSS Preprocessors",
-    ],
-  },
-  {
-    title: "Project Management",
-    description: "What's included in the program ?",
+    title: "Sex Education",
+    description: "What's included in the program?",
     img: "/media/course-6.jpg",
     features: [
-      "Project Planning",
-      "Risk Management",
-      "Agile Methodologies",
-      "Team Collaboration Tools",
+      "Sexual Health Education",
+      "Relationship Dynamics",
+      "Consent Education",
+      "Gender and Sexuality Studies",
     ],
   },
   {
-    title: "Photography",
-    description: "What's included in the program ?",
-    img: "/media/course-7.jpg",
+    title: "Stock Market Analysis",
+    description: "What's included in the program?",
+    img: "/media/stock-market-analysis.jpg",
     features: [
-      "Understanding Camera Settings",
-      "Composition Techniques",
-      "Image Editing with Adobe Lightroom",
-      "Photography Styles",
+      "Market Research Techniques",
+      "Risk Assessment Strategies",
+      "Technical Analysis Methods",
+      "Investment Portfolio Management",
     ],
   },
 ];
@@ -194,6 +187,118 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+  ) {
+    const nonTchCards = document.getElementById("nonTchCrds");
+
+    nonTch.forEach((card, index) => {
+      // Card Mapping
+      const exploreProgCard = document.createElement("div");
+      exploreProgCard.className =
+        "explore_prog_card backdrop-blur-md bg-[#fff]/100  items-center modal-open transition-all duration-300 ease-out";
+      exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
+
+      const img = document.createElement("img");
+      img.className = "w-full h-32 object-contain";
+      img.src = card.img;
+      img.alt = "";
+
+      const title = document.createElement("h3");
+      title.className = "text-[#0c2e7a] font-bold mt-6 text-xl";
+      title.textContent = card.title;
+
+      const description = document.createElement("button");
+      description.className =
+        "text-[#fff] py-2 px-3 ts_crs_btn  font-medium rounded-md text-sm";
+      description.textContent = "See Program->";
+
+      exploreProgCard.appendChild(img);
+      exploreProgCard.appendChild(title);
+      exploreProgCard.appendChild(description);
+
+      const modal = document.createElement("div");
+      modal.className =
+        "modal shadow-md shadow-black/90 ring-1 hidden transition-all duration-300 ease-out";
+      modal.id = `modal-${index + 1}`;
+
+      const modalHeading = document.createElement("div");
+      modalHeading.className = "modal-heading";
+
+      const modalTitle = document.createElement("h1");
+      modalTitle.id = `modal-title-${index + 1}`;
+      modalTitle.textContent = card.title;
+
+      const modalClose = document.createElement("i");
+      modalClose.className = "fa-solid fa-xmark cursor-pointer modal-close";
+
+      const hr = document.createElement("hr");
+
+      const modalContent = document.createElement("div");
+      modalContent.className = "modal-content";
+
+      const modalDescription = document.createElement("h1");
+      modalDescription.id = `modal-description-${index + 1}`;
+      modalDescription.textContent = card.description;
+
+      const ul = document.createElement("ul");
+
+      card.features.forEach((feature, i) => {
+        const li = document.createElement("li");
+        li.id = `modal-feature${i + 1}-${index + 1}`;
+        li.textContent = feature;
+        ul.appendChild(li);
+      });
+
+      modalContent.appendChild(modalDescription);
+      modalContent.appendChild(ul);
+
+      const button = document.createElement("button");
+      const a = document.createElement("a");
+      a.href = "/courses.html";
+      a.className = "underline-none";
+      a.textContent = "See Details ";
+      const i = document.createElement("i");
+      i.className = "fa-solid fa-arrow-up-right-from-square";
+      a.appendChild(i);
+      button.appendChild(a);
+
+      modal.appendChild(modalHeading);
+      modalHeading.appendChild(modalTitle);
+      modalHeading.appendChild(modalClose);
+      modal.appendChild(hr);
+      modal.appendChild(modalContent);
+      modal.appendChild(button);
+
+      nonTchCards.appendChild(exploreProgCard);
+      document.body.appendChild(modal);
+
+      exploreProgCard.addEventListener("click", () => {
+        // Show the modal
+
+        modal.classList.add("show");
+
+        const viewportHeight = window.innerHeight;
+        const modalHeight = modal.clientHeight;
+        const cardRect = exploreProgCard.getBoundingClientRect();
+        let modalTop = cardRect.top + window.pageYOffset + cardRect.height + 10;
+
+        if (modalTop + modalHeight > viewportHeight) {
+          modalTop = viewportHeight - modalHeight - 10;
+        }
+
+        modal.style.top = `${Math.max(window.pageYOffset, modalTop)}px`;
+      });
+
+      modalClose.addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+    });
+  }
+});
+
 dropdownBtn.addEventListener("click", () => {
   dropdownElmnts.classList.toggle("active");
 });
@@ -272,10 +377,14 @@ const q1 = document.getElementById("q1");
 const q2 = document.getElementById("q2");
 const q3 = document.getElementById("q3");
 const q4 = document.getElementById("q4");
+const q6 = document.getElementById("q6");
+const q7 = document.getElementById("q7");
 const mq1 = document.getElementById("mq1");
 const mq2 = document.getElementById("mq2");
 const mq3 = document.getElementById("mq3");
 const mq4 = document.getElementById("mq4");
+const mq6 = document.getElementById("mq6");
+const mq7 = document.getElementById("mq7");
 
 const feedbackForm = document.querySelector(".feedback-form");
 const answerForm = document.querySelector(".answer-form");
@@ -291,8 +400,7 @@ if (
   window.location.pathname === "/index.html"
 ) {
   q1.addEventListener("click", () => {
-    answerFaq.innerHTML = `TS Bridge Edu is a community where you can learn skills, network with smart people, and find work.
-  Join the WhatsApp Community to find all these opportunities.`;
+    answerFaq.innerHTML = `TS Bridge Edu is a multifaceted platform offering skill-based courses, tailored internships, job recommendations, and live free training. Engage in community-building activities, hackathons, networking events, seminars, and workshops for holistic growth. Join our vibrant WhatsApp Community to access these enriching opportunities and connect with like-minded individuals.`;
     if (!feedbackForm.classList.contains("hidden")) {
       feedbackForm.classList.add("hidden");
     }
@@ -302,8 +410,7 @@ if (
   });
 
   mq1.addEventListener("click", () => {
-    mobileFaq.innerHTML = `TS Bridge Edu is a community where you can learn skills, network with smart people, and find work.
-  Join the WhatsApp Community to find all these opportunities.`;
+    mobileFaq.innerHTML = `TS Bridge Edu is a multifaceted platform offering skill-based courses, tailored internships, job recommendations, and live free training. Engage in community-building activities, hackathons, networking events, seminars, and workshops for holistic growth. Join our vibrant WhatsApp Community to access these enriching opportunities and connect with like-minded individuals.`;
     if (!mobileFeedbackForm.classList.contains("hidden")) {
       mobileFeedbackForm.classList.add("hidden");
     }
@@ -314,7 +421,7 @@ if (
   });
 
   q2.addEventListener("click", () => {
-    answerFaq.innerHTML = `No TS Bridge Edu is completely free.`;
+    answerFaq.innerHTML = `Our services are designed for graduate students, recent graduates, educators, and professionals seeking to enhance their skills, advance their careers, or stay updated with the latest trends in education technology. Hence each and everyone one can get it .`;
     if (!feedbackForm.classList.contains("hidden")) {
       feedbackForm.classList.add("hidden");
     }
@@ -325,7 +432,8 @@ if (
   });
 
   mq2.addEventListener("click", () => {
-    mobileFaq.innerHTML = `No TS Bridge Edu is completely free.`;
+    mobileFaq.innerHTML = `Our services are designed for graduate students, recent graduates, educators, and professionals seeking to enhance their skills, advance their careers, or stay updated with the latest trends in education technology.
+    `;
 
     if (!mobileFeedbackForm.classList.contains("hidden")) {
       mobileFeedbackForm.classList.add("hidden");
@@ -359,7 +467,9 @@ if (
   });
 
   q4.addEventListener("click", () => {
-    answerFaq.innerHTML = `It's simple. Fill the requirement form.`;
+    answerFaq.innerHTML = `We offer a variety of courses covering subjects such as coding, data analytics, digital marketing, educational technology, and more. Our courses are designed to provide practical skills and knowledge that are directly applicable in the professional world.
+
+    `;
     if (!feedbackForm.classList.contains("hidden")) {
       feedbackForm.classList.add("hidden");
     }
@@ -370,7 +480,9 @@ if (
   });
 
   mq4.addEventListener("click", () => {
-    mobileFaq.innerHTML = `It's simple. Fill the requirement form.`;
+    mobileFaq.innerHTML = `We offer a variety of courses covering subjects such as coding, data analytics, digital marketing, educational technology, and more. Our courses are designed to provide practical skills and knowledge that are directly applicable in the professional world.
+
+    `;
 
     if (!mobileFeedbackForm.classList.contains("hidden")) {
       mobileFeedbackForm.classList.add("hidden");
@@ -378,6 +490,61 @@ if (
 
     if (mobileFeedbackForm.classList.contains("hidden")) {
       mobileAnswerForm.classList.remove("hidden");
+    }
+  });
+
+  q6.addEventListener("click", () => {
+    answerFaq.innerHTML = `Our job recommendation service uses advanced algorithms to match your profile with job opportunities that fit your skills, experience, and career goals. Simply create a profile, and you’ll start receiving tailored job recommendations.
+
+
+    `;
+    if (!feedbackForm.classList.contains("hidden")) {
+      feedbackForm.classList.add("hidden");
+    }
+
+    if (feedbackForm.classList.contains("hidden")) {
+      answerForm.classList.remove("hidden");
+    }
+  });
+  mq6.addEventListener("click", () => {
+    answerFaq.innerHTML = `Our job recommendation service uses advanced algorithms to match your profile with job opportunities that fit your skills, experience, and career goals. Simply create a profile, and you’ll start receiving tailored job recommendations.
+
+
+    `;
+    if (!feedbackForm.classList.contains("hidden")) {
+      feedbackForm.classList.add("hidden");
+    }
+
+    if (feedbackForm.classList.contains("hidden")) {
+      answerForm.classList.remove("hidden");
+    }
+  });
+  q7.addEventListener("click", () => {
+    answerFaq.innerHTML = `To start building your portfolio, log in to your TS Bridge Edu account and navigate to the portfolio section. Follow the step-by-step guide to add and organize your work.
+    Include a variety of work that highlights your skills and achievements, such as projects, research papers, presentations, creative works, certifications, and any other relevant materials.
+
+
+    `;
+    if (!feedbackForm.classList.contains("hidden")) {
+      feedbackForm.classList.add("hidden");
+    }
+
+    if (feedbackForm.classList.contains("hidden")) {
+      answerForm.classList.remove("hidden");
+    }
+  });
+  mq7.addEventListener("click", () => {
+    answerFaq.innerHTML = `To start building your portfolio, log in to your TS Bridge Edu account and navigate to the portfolio section. Follow the step-by-step guide to add and organize your work.
+    Include a variety of work that highlights your skills and achievements, such as projects, research papers, presentations, creative works, certifications, and any other relevant materials.
+
+
+    `;
+    if (!feedbackForm.classList.contains("hidden")) {
+      feedbackForm.classList.add("hidden");
+    }
+
+    if (feedbackForm.classList.contains("hidden")) {
+      answerForm.classList.remove("hidden");
     }
   });
 
@@ -421,7 +588,7 @@ if (
 
   const startCounter = () => {
     var counters = document.querySelectorAll('[id^="stats_cntr_"]');
-    var targets = [50, 1000, 30, 70]; // Specify the target values here
+    var targets = [50, 1000, 50, 100]; // Specify the target values here
     var speed = 200; // Speed of counting in milliseconds
 
     counters.forEach(function (counter, index) {
@@ -576,8 +743,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.classList.add("project_box", "courses");
 
-     
-
       const img = document.createElement("img");
       img.className = "w-full h-32 object-contain ";
       img.src = project.img;
@@ -590,7 +755,8 @@ document.addEventListener("DOMContentLoaded", () => {
       skillsElement.classList.add("courses_skills");
       project.skills.forEach((skill) => {
         const skillButton = document.createElement("button");
-        skillButton.className = 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white'
+        skillButton.className =
+          "bg-gradient-to-r from-violet-600 to-indigo-600 text-white";
         skillButton.textContent = skill;
         skillsElement.appendChild(skillButton);
       });
@@ -602,7 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const button = document.createElement("button");
       button.className = "button-with-anchor";
       const anchor = document.createElement("a");
-      anchor.href = 'https://forms.gle/wqSSiMgVUvZd9gKg7';
+      anchor.href = "https://forms.gle/wqSSiMgVUvZd9gKg7";
       anchor.textContent = "View Details";
       button.appendChild(anchor);
 
@@ -611,8 +777,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.appendChild(skillsHeading);
       card.appendChild(skillsElement);
       card.appendChild(button);
-
-      
 
       container.appendChild(card);
     });

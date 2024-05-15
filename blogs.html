@@ -4,16 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
-
     <link rel="stylesheet" href="/css/master.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <script type="text/javascript">
       window.$crisp = [];
@@ -27,247 +18,150 @@
       })();
     </script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>About | TS Bridge</title>
+    <title>Blogs</title>
   </head>
   <body>
+
     <nav
-      id="navbar"
-      class="top-0 z-20 navbar__main flex max-[570px]:justify-between justify-around items-center px-10 py-4"
+    id="homeNavbar"
+    class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+  >
+    <div
+      class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
     >
+      <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
+        ><span
+          class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
+          >TS Bridge</span
+        >
+      </a>
+    </div>
+    <ul
+      class="flex block text-[#101114] py-3 rounded-3xl gap-10 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+    >
+      <li
+        class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/">Home</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/courses.html">Courses</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a
+          class="no-underline"
+          href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+          >Community</a
+        >
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/about.html">About</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/blogs.html">Blogs</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/careers.html">Careers</a>
+      </li>
+    </ul>
+
+    <div class="flex items-center justify-center gap-5 relative">
+      <button
+        class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
+      >
+        Sign up
+      </button>
       <div
-        class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col rounded-md items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
+        class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
       >
-        <img src="/media/logo.png" class="w-20 max-[570px]:w-10" /><a href="/"
-          ><span
-            class="nav_head_title text-[#23AAB9] text-[33px] max-[570px]:text-[20px]"
-            >TS Bridge</span
-          ></a
-        >
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-google-play"></i>
+        </button>
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-app-store-ios"></i>
+        </button>
       </div>
-      <ul
-        class="flex block text-[#222222] py-3 rounded-3xl gap-10 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+      <button
+        id="nav__dpdn_btn"
+        class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
       >
-        <li
-          class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/">Home</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/courses.html">Courses</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a
-            class="no-underline"
-            href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
-            >Community</a
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div
+        class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
+        id="nav_dpdn_elmnts_active"
+      >
+        <div class="flex text-white justify-end mr-2">
+          <i class="fa-solid fa-caret-up"></i>
+        </div>
+        <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
+          <ul
+            class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
           >
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/about.html">About</a>
-        </li>
-      </ul>
+            <li class="gap-2 cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/">Home</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center">
+                <a class="no-underline" href="/courses.html">Courses</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a
+                  class="no-underline"
+                  href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+                  >Community</a
+                ></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/about.html">About</a></span
+              >
+            </li>
 
-      <div class="flex items-center justify-center gap-5 relative">
-        <button
-          class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
-        >
-          Sign up
-        </button>
-        <div
-          class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md opacity-80 backdrop-blur-md"
-        >
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-google-play"></i>
-          </button>
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-app-store-ios"></i>
-          </button>
-        </div>
-        <button
-          id="nav__dpdn_btn"
-          class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div
-          class="flex flex-col absolute z-10 top-11 right-3 hidden abt-dropdwn-elmnts"
-          id="nav_dpdn_elmnts_active"
-        >
-          <div class="flex text-white justify-end mr-2">
-            <i class="fa-solid fa-caret-up"></i>
-          </div>
-          <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
-            <ul
-              class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
-            >
-              <li class="gap-2 cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/">Home</a></span
+            <li>
+              <hr class="bg-black h-[2px] w-[80px] opacity-50" />
+            </li>
+            <li class="mt-2">
+              <button
+                class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
+              >
+                <span class="hover:shadow-md hover:shadow-white/50"
+                  >Sign up</span
                 >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center">
-                  <a class="no-underline" href="/courses.html">Courses</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a
-                    class="no-underline"
-                    href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ/community.html"
-                    >Community</a
-                  ></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/about.html">About</a></span
-                >
-              </li>
-
-              <li>
-                <hr class="bg-black h-[2px] w-[80px] opacity-50" />
-              </li>
-              <li class="mt-2">
-                <button
-                  class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
-                >
-                  <span class="hover:shadow-md hover:shadow-white/50"
-                    >Sign up</span
-                  >
-                </button>
-              </li>
-            </ul>
-          </div>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main class="section-gs-dark is-about-us">
-      <div class="w-full">
-        <div class="page-padding2">
-          <div class="text-center">
-            <div class="block-792">
-              <h1 class="style-h1 max-[768px]:text-[2.875rem]">
-                Unleashing Potential, Transforming Lives
-              </h1>
-              <div class="text-block257 max-[768px]:text-[1rem]">
-                "At TS Bridge Edu. we partner with the top 1% of instructors to
-                create high-impact cohort-based courses on personal and
-                professional growth for learners all over the world."
-              </div>
-              <div class="whatsapp_join_btn flex items-center">
-                <button
-                  class="shadow-md shadow-white/50 ring-1 hover:shadow-[#00a884] duration-300 transition-all ring-black/50 bg-white text-black text-lg font-bold tracking-wide px-4 py-2 rounded-md"
-                >
-                  <a href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ">
-                    Join our WhatsApp community</a
-                  >
-                  <i class="ml-4 text-xl font-bold fa-brands fa-whatsapp"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <section class="section-ts" id="sectionTs">
-      <div class="padding-v-120 max-[479px]:pt-[80px]">
-        <div class="page-padding2">
-          <div class="about-layout">
-            <div class="about-content">
-              <div class="block-793">
-                <h3
-                  class="about-heading max-[479px]:text-[2rem] max-[479px]:font-[600]"
-                >
-                  What Drives Us?
-                </h3>
-
-                <div class="text-sm font-sm">
-                  While college was an enjoyable experience for many, it didn't
-                  equip us with the necessary skills to thrive in today's online
-                  landscape. We aim to change that by collaborating with top
-                  industry leaders to create career-focused programs that can
-                  help you start a new career or enhance existing skills
-                </div>
-              </div>
-
-              <div class="about-img">
-                <img
-                  src="/media/what-drives-us.png"
-                  loading="lazy"
-                  alt="what-drives-us?"
-                  class="hover:scale-110 duration-300 transition-all ease-out hover:cursor-pointer overflow-hidden max-[479px]:self-center max-w-full object-cover w-full h-full"
-                />
-              </div>
-            </div>
-
-            <div class="about-content flex-row-reverse max-[768px]:flex-col">
-              <div class="block-793">
-                <h3
-                  class="about-heading max-[479px]:text-[2rem] max-[479px]:font-[600]"
-                >
-                  The Power of Community
-                </h3>
-
-                <div class="text-sm font-sm">
-                  You learn more from your peers than your mentors or teachers
-                  in the real world. You can have better ideas & have better
-                  professional outcomes when like-minded people surround you.
-                  Our programs are focused on community learning & engagement.
-                </div>
-              </div>
-
-              <div class="about-img">
-                <img
-                  src="/media/the-power-of-community.jpg"
-                  loading="lazy"
-                  alt="what-drives-us?"
-                  class="hover:scale-110 duration-300 transition-all ease-out hover:cursor-pointer overflow-hidden max-[479px]:self-center max-w-full object-cover w-full h-full"
-                />
-              </div>
-            </div>
-
-            <div class="about-content">
-              <div class="block-793">
-                <h3
-                  class="about-heading max-[479px]:text-[2rem] max-[479px]:font-[600]"
-                >
-                  Support from Great Mentors
-                </h3>
-
-                <div class="text-sm font-sm">
-                  Having a supportive and knowledgeable mentor can greatly
-                  enhance your career journey. They can help you avoid pitfalls
-                  and progress more smoothly. Wel only collaborate with the best
-                  of the best - the top 1% of professionals in their field.
-                </div>
-              </div>
-
-              <div class="about-img">
-                <img
-                  src="/media/support-from-great-mentors.png"
-                  loading="lazy"
-                  alt="what-drives-us?"
-                  class="hover:scale-110 duration-300 transition-all ease-out hover:cursor-pointer overflow-hidden max-[479px]:self-center max-w-full object-cover w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
+  <footer
     id="homeFooter"
     class="dark footer__bottom pt-6 text-gray-50 md:pt-20 flex justify-center max-[768px]:flex max-[768px]:justify-center max-[768px]:px-10 px-10"
   >
@@ -470,6 +364,6 @@
       </div>
     </div>
   </footer>
-    <script src="/js/master.js"></script>
+
   </body>
 </html>

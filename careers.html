@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/master.css" />
+
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "6b5b0ccb-a1d4-4d3a-8b11-312b996d0e95";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Careers</title>
+</head>
+<body>
+  <nav
+  id="homeNavbar"
+  class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+>
+  <div
+    class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
+  >
+    <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
+      ><span
+        class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
+        >TS Bridge</span
+      >
+    </a>
+  </div>
+  <ul
+    class="flex block text-[#101114] py-3 rounded-3xl gap-10 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+  >
+    <li
+      class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a class="no-underline" href="/">Home</a>
+    </li>
+    <li
+      class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a class="no-underline" href="/courses.html">Courses</a>
+    </li>
+    <li
+      class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a
+        class="no-underline"
+        href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+        >Community</a
+      >
+    </li>
+    <li
+      class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a class="no-underline" href="/about.html">About</a>
+    </li>
+    <li
+      class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a class="no-underline" href="/blogs.html">Blogs</a>
+    </li>
+    <li
+      class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+    >
+      <a class="no-underline" href="/careers.html">Careers</a>
+    </li>
+  </ul>
+
+  <div class="flex items-center justify-center gap-5 relative">
+    <button
+      class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
+    >
+      Sign up
+    </button>
+    <div
+      class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
+    >
+      <button class="text-lg hover:shadow-lg hover:shadow-white">
+        <i class="fa-brands fa-google-play"></i>
+      </button>
+      <button class="text-lg hover:shadow-lg hover:shadow-white">
+        <i class="fa-brands fa-app-store-ios"></i>
+      </button>
+    </div>
+    <button
+      id="nav__dpdn_btn"
+      class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div
+      class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
+      id="nav_dpdn_elmnts_active"
+    >
+      <div class="flex text-white justify-end mr-2">
+        <i class="fa-solid fa-caret-up"></i>
+      </div>
+      <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
+        <ul
+          class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
+        >
+          <li class="gap-2 cursor-pointer">
+            <span class="text-center"
+              ><a class="no-underline" href="/">Home</a></span
+            >
+          </li>
+          <li class="cursor-pointer">
+            <span class="text-center">
+              <a class="no-underline" href="/courses.html">Courses</a></span
+            >
+          </li>
+          <li class="cursor-pointer">
+            <span class="text-center"
+              ><a
+                class="no-underline"
+                href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+                >Community</a
+              ></span
+            >
+          </li>
+          <li class="cursor-pointer">
+            <span class="text-center"
+              ><a class="no-underline" href="/about.html">About</a></span
+            >
+          </li>
+
+          <li>
+            <hr class="bg-black h-[2px] w-[80px] opacity-50" />
+          </li>
+          <li class="mt-2">
+            <button
+              class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
+            >
+              <span class="hover:shadow-md hover:shadow-white/50"
+                >Sign up</span
+              >
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<footer
+      id="homeFooter"
+      class="dark footer__bottom pt-6 text-gray-50 md:pt-20 flex justify-center max-[768px]:flex max-[768px]:justify-center max-[768px]:px-10 px-10"
+    >
+      <div class="container relative">
+        <div
+          class="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-between md:gap-4 lg:flex-nowrap"
+        >
+          <div class="max-w-xs">
+            <p>
+              TS Bridge is one of India&#x27;s largest student communities that
+              provides a one-stop platform for students to learn new skills,
+              network with peers, and grow as an individual.
+            </p>
+            <div class="mt-6 flex items-center gap-4 md:mt-10 md:gap-7">
+              <button
+                role="group"
+                class="cursor-pointer flex shrink-0 gap-2 items-center justify-center w-fit rounded-full focus-visble:ring focus-visble:ring-gray-800 focus-visble:ring-opacity-10 ring-gray-800 focus:outline-none transition-all duration-300 select-none disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 p-2 gap-4"
+                type="button"
+              >
+                <a href="https://twitter.com/Tysonchandu4"
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    font-size="20"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"
+                    ></path>
+                  </svg>
+                </a>
+              </button>
+              <button
+                role="group"
+                class="cursor-pointer flex shrink-0 gap-2 items-center justify-center w-fit rounded-full focus-visble:ring focus-visble:ring-gray-800 focus-visble:ring-opacity-10 ring-gray-800 focus:outline-none transition-all duration-300 select-none disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 p-2 gap-4"
+                type="button"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  font-size="20"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                role="group"
+                class="cursor-pointer flex shrink-0 gap-2 items-center justify-center w-fit rounded-full focus-visble:ring focus-visble:ring-gray-800 focus-visble:ring-opacity-10 ring-gray-800 focus:outline-none transition-all duration-300 select-none disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 p-2 gap-4"
+                type="button"
+              >
+                <a href="https://www.linkedin.com/company/ts-bridge-edu">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    font-size="20"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                    ></path></svg
+                ></a>
+              </button>
+              <button
+                role="group"
+                class="cursor-pointer flex shrink-0 gap-2 items-center justify-center w-fit rounded-full focus-visble:ring focus-visble:ring-gray-800 focus-visble:ring-opacity-10 ring-gray-800 focus:outline-none transition-all duration-300 select-none disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 p-2 gap-4"
+                type="button"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  font-size="20"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M960 509.2c0-2.2 0-4.7-.1-7.6-.1-8.1-.3-17.2-.5-26.9-.8-27.9-2.2-55.7-4.4-81.9-3-36.1-7.4-66.2-13.4-88.8a139.52 139.52 0 0 0-98.3-98.5c-28.3-7.6-83.7-12.3-161.7-15.2-37.1-1.4-76.8-2.3-116.5-2.8-13.9-.2-26.8-.3-38.4-.4h-29.4c-11.6.1-24.5.2-38.4.4-39.7.5-79.4 1.4-116.5 2.8-78 3-133.5 7.7-161.7 15.2A139.35 139.35 0 0 0 82.4 304C76.3 326.6 72 356.7 69 392.8c-2.2 26.2-3.6 54-4.4 81.9-.3 9.7-.4 18.8-.5 26.9 0 2.9-.1 5.4-.1 7.6v5.6c0 2.2 0 4.7.1 7.6.1 8.1.3 17.2.5 26.9.8 27.9 2.2 55.7 4.4 81.9 3 36.1 7.4 66.2 13.4 88.8 12.8 47.9 50.4 85.7 98.3 98.5 28.2 7.6 83.7 12.3 161.7 15.2 37.1 1.4 76.8 2.3 116.5 2.8 13.9.2 26.8.3 38.4.4h29.4c11.6-.1 24.5-.2 38.4-.4 39.7-.5 79.4-1.4 116.5-2.8 78-3 133.5-7.7 161.7-15.2 47.9-12.8 85.5-50.5 98.3-98.5 6.1-22.6 10.4-52.7 13.4-88.8 2.2-26.2 3.6-54 4.4-81.9.3-9.7.4-18.8.5-26.9 0-2.9.1-5.4.1-7.6v-5.6zm-72 5.2c0 2.1 0 4.4-.1 7.1-.1 7.8-.3 16.4-.5 25.7-.7 26.6-2.1 53.2-4.2 77.9-2.7 32.2-6.5 58.6-11.2 76.3-6.2 23.1-24.4 41.4-47.4 47.5-21 5.6-73.9 10.1-145.8 12.8-36.4 1.4-75.6 2.3-114.7 2.8-13.7.2-26.4.3-37.8.3h-28.6l-37.8-.3c-39.1-.5-78.2-1.4-114.7-2.8-71.9-2.8-124.9-7.2-145.8-12.8-23-6.2-41.2-24.4-47.4-47.5-4.7-17.7-8.5-44.1-11.2-76.3-2.1-24.7-3.4-51.3-4.2-77.9-.3-9.3-.4-18-.5-25.7 0-2.7-.1-5.1-.1-7.1v-4.8c0-2.1 0-4.4.1-7.1.1-7.8.3-16.4.5-25.7.7-26.6 2.1-53.2 4.2-77.9 2.7-32.2 6.5-58.6 11.2-76.3 6.2-23.1 24.4-41.4 47.4-47.5 21-5.6 73.9-10.1 145.8-12.8 36.4-1.4 75.6-2.3 114.7-2.8 13.7-.2 26.4-.3 37.8-.3h28.6l37.8.3c39.1.5 78.2 1.4 114.7 2.8 71.9 2.8 124.9 7.2 145.8 12.8 23 6.2 41.2 24.4 47.4 47.5 4.7 17.7 8.5 44.1 11.2 76.3 2.1 24.7 3.4 51.3 4.2 77.9.3 9.3.4 18 .5 25.7 0 2.7.1 5.1.1 7.1v4.8zM423 646l232-135-232-133z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                role="group"
+                class="cursor-pointer flex shrink-0 gap-2 items-center justify-center w-fit rounded-full focus-visble:ring focus-visble:ring-gray-800 focus-visble:ring-opacity-10 ring-gray-800 focus:outline-none transition-all duration-300 select-none disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 p-2 gap-4"
+                type="button"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  font-size="20"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="text-sm md:text-lg">
+            <h4 class="font-semibold text-[#0e90dd]">COMPANY</h4>
+            <ul class="mt-4 w-fit space-y-3">
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                <a href="about.html">About us</a>
+              </li>
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                <a href="privacy-policy.html" class="underline-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                Terms &amp; conditions
+              </li>
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                Contact us
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-sm md:text-lg">
+            <h4 class="font-semibold text-[#0e90dd]">QUICK LINKS</h4>
+            <ul class="mt-4 w-fit space-y-3">
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                <a href="https://forms.gle/wqSSiMgVUvZd9gKg7">Find work</a>
+              </li>
+
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                <a href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ">
+                  Community</a
+                >
+              </li>
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                Events
+              </li>
+              <li class="cursor-pointer underline-offset-2 hover:underline">
+                Blog
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="space-y-4 md:space-y-6 max-[768px]:flex-col max-[768px]:flex max-[768px]:items-center"
+          >
+            <!-- <h4 class="text-sm font-semibold md:text-lg">Join Community</h4> -->
+            <div class="whatsapp_join_btn flex items-center max-[768px]:mb-10">
+              <button
+                class="shadow-md shadow-white/50 ring-1 hover:shadow-[#00a884] duration-300 transition-all ring-black/50 bg-white text-black text-lg font-bold tracking-wide px-4 py-2 rounded-md"
+              >
+                <a href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ">
+                  Join our WhatsApp community</a
+                >
+                <i class="ml-4 text-xl font-bold fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+
+            <p class="text-md text-center mt-6 lg:text-xl">
+              ©2024
+              <a
+                class="text-[#f2f2f2] hover:underline"
+                href="https://www.tsbridgeedu.in"
+                >TS Bridge Edu.
+              </a>
+              All rights reserved
+            </p>
+          </div>
+        </div>
+        <div
+          class="px-2 pt-[10vmin] pb-1 md:-bottom-72 justify-center flex items-center flex-col"
+        >
+          <img
+            fill="none"
+            src="/media/logo.png"
+            class="w-48 max-[570px]:w-20 mb-3"
+          />
+
+          <span
+            class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
+            >TS Bridge</span
+          >
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
