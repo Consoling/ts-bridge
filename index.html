@@ -744,10 +744,14 @@
               </svg>
             </div>
             <div class="flex h-full w-full flex-col gap-4">
+              <form action="feedback.php" method="post">
+
+            
               <textarea
                 placeholder="Send us feedback"
                 class="w-full grow resize-none rounded-xl bg-gray-50 px-3 py-3 focus-visible:outline-none"
                 style="height: 120px !important"
+                name="feedback_message" required
               ></textarea>
               <div class="flex gap-2">
                 <div
@@ -776,7 +780,7 @@
                 </div>
                 <button
                   class="cursor-pointer flex shrink-0 justify-center items-center gap-2 font-semibold transition-all duration-300 rounded-full focus-visible:ring focus-visible:ring-red-800 focus-visible:ring-opacity-10 ring-red-800 focus:outline-none select-none disabled:cursor-not-allowed disabled:opacity-80 text-gray-50 dark:text-gray-900 bg-gray-900 dark:bg-gray-50 hover:bg-gray-800 dark:hover:bg-gray-100 lg:px-6 px-4 lg:py-2 py-1 lg:text-sm text-xs grow"
-                  type="button"
+                  type="submit" name="submit"
                 >
                   <svg
                     class="animate-spin-slowly h-3 w-3 hidden"
@@ -815,6 +819,7 @@
                 </button>
               </div>
               <input type="file" class="hidden" accept="image" />
+            </form>
             </div>
           </div>
         </div>
