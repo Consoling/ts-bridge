@@ -5,16 +5,7 @@
     <title>Contact Us</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
-
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
-    <link rel="icon" href="favicon.png" />
-     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/master.css" />
 
     <script type="text/javascript">
@@ -39,161 +30,160 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-200" >
+  <body class="bg-gray-200">  
 
-    
     <nav
-      id="homeNavbar"
-      class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+    id="homeNavbar"
+    class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+  >
+    <div
+      class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
     >
+      <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
+        ><span
+          class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
+          >TS Bridge</span
+        >
+      </a>
+    </div>
+    <ul
+      class="flex block text-[#101114] py-3 rounded-3xl gap-7 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+    >
+      <li
+        class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/">Home</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/courses.html">Courses</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a
+          class="no-underline"
+          href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+          >Community</a
+        >
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/about.html">About</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/blogs.html">Blogs</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/careers.html">Careers</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+    <div class="flex items-center justify-center gap-5 relative">
+      <button
+        class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
+      >
+        Sign up
+      </button>
       <div
-        class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
+        class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
       >
-        <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
-          ><span
-            class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
-            >TS Bridge</span
-          >
-        </a>
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-google-play"></i>
+        </button>
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-app-store-ios"></i>
+        </button>
       </div>
-      <ul
-        class="flex block text-[#101114] py-3 rounded-3xl gap-7 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+      <button
+        id="nav__dpdn_btn"
+        class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
       >
-        <li
-          class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/">Home</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/courses.html">Courses</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a
-            class="no-underline"
-            href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
-            >Community</a
-          >
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/about.html">About</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/blogs.html">Blogs</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/careers.html">Careers</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/contact.html">Contact Us</a>
-        </li>
-      </ul>
-
-      <div class="flex items-center justify-center gap-5 relative">
-        <button
-          class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
-        >
-          Sign up
-        </button>
-        <div
-          class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
-        >
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-google-play"></i>
-          </button>
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-app-store-ios"></i>
-          </button>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div
+        class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
+        id="nav_dpdn_elmnts_active"
+      >
+        <div class="flex text-white justify-end mr-2">
+          <i class="fa-solid fa-caret-up"></i>
         </div>
-        <button
-          id="nav__dpdn_btn"
-          class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div
-          class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
-          id="nav_dpdn_elmnts_active"
-        >
-          <div class="flex text-white justify-end mr-2">
-            <i class="fa-solid fa-caret-up"></i>
-          </div>
-          <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
-            <ul
-              class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
-            >
-              <li class="gap-2 cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/">Home</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center">
-                  <a class="no-underline" href="/courses.html">Courses</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a
-                    class="no-underline"
-                    href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
-                    >Community</a
-                  ></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/about.html">About</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/careers.html"
-                    >Careers</a
-                  ></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/blogs.html">Blogs</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/blogs.html"
-                    >Contact Us</a
-                  ></span
-                >
-              </li>
+        <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
+          <ul
+            class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
+          >
+            <li class="gap-2 cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/">Home</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center">
+                <a class="no-underline" href="/courses.html">Courses</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a
+                  class="no-underline"
+                  href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+                  >Community</a
+                ></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/about.html">About</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/careers.html"
+                  >Careers</a
+                ></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/blogs.html">Blogs</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/blogs.html"
+                  >Contact Us</a
+                ></span
+              >
+            </li>
 
-              <li>
-                <hr class="bg-black h-[2px] w-[80px] opacity-50" />
-              </li>
-              <li class="mt-2">
-                <button
-                  class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
+            <li>
+              <hr class="bg-black h-[2px] w-[80px] opacity-50" />
+            </li>
+            <li class="mt-2">
+              <button
+                class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
+              >
+                <span class="hover:shadow-md hover:shadow-white/50"
+                  >Sign up</span
                 >
-                  <span class="hover:shadow-md hover:shadow-white/50"
-                    >Sign up</span
-                  >
-                </button>
-              </li>
-            </ul>
-          </div>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <div class="h-full" style="font-family: 'Teko', sans-serif">
         <main
@@ -203,24 +193,16 @@
          
 
        
-            <div class=" flex items-center md:relative sm:ml-28 p-4 gap-2 text-white">
-              <p
-              style="background-image: linear-gradient(200deg, rgba(0, 0, 0, 1) 0%, rgba(14, 144, 221, 1) 100%)"
-                class="p-5 w-14 flex justify-center text-white rounded-full"
-              >
-                <i class="fa-solid fa-angle-right"></i>
-              </p>
-              <h3 class="text-2xl font-bold">Get A Quote</h3>
-            </div>
+          
 
             <div class="flex flex-col justify-center items-center gap-4">
               <div class="flex  gap-1 ">
                 <h1 class="text-5xl font-extrabold text-white">CONTACT US</h1>
-                <span class="text-5xl text-[#061723]">•</span>
+                <span class="text-5xl text-[#5169f7]">•</span>
               </div>
-              <div class="flex gap-2">
-                <h1 class="text-2xl font-semibold text-white">Home &nbsp;/</h1>
-                <h1 class="text-2xl font-semibold text-[#061723]">Contact us</h1>
+              <div class="flex gap-2  text-white">
+                <h1 class="text-xl font-semibold">Home &nbsp;/</h1>
+                <h1 class="text-xl font-semibold">Contact us</h1>
               </div>
             </div>
 
@@ -235,7 +217,7 @@
         >
           <div >
             <h1 class="text-5xl font-extrabold text-black text-wrap">WE ARE ALWAYS HERE TO HELP YOU
-                <span class="text-5xl text-[#0e5786]">•</span>
+                <span class="text-5xl text-[#5169f7]">•</span>
             </h1>
             <h4 class="text-lg text-gray-500" style="font-family: 'Rubik', sans-serif">
                 There are many variatns of passages the majority have suffered alteration in some foor randomised words believable.
@@ -253,8 +235,8 @@
                     </p>
                  
                 <div>
-                  <h4 class="font-semibold text-2xl">VISIT US</h4>
-                  <p class="text-lg text-gray-500" style="font-family: 'Rubik', sans-serif">
+                  <h4 class="font-semibold text-xl">VISIT US</h4>
+                  <p class="text-md text-gray-500" style="font-family: 'Rubik', sans-serif">
                     Hanuman Nagar, Chaitanyapuri, Hyderabad, Telangana, India, 500060
                   </p>
                 </div>
@@ -269,8 +251,8 @@
                 </p>
              
             <div>
-              <h4 class="font-semibold text-2xl">  EMAIL ADDRESS</h4>
-              <p class="text-lg text-gray-500" style="font-family: 'Rubik', sans-serif">
+              <h4 class="font-semibold text-xl">  EMAIL ADDRESS</h4>
+              <p class="text-md text-gray-500" style="font-family: 'Rubik', sans-serif">
               
 
                 tsbridgeedu@gmail.com
@@ -287,8 +269,8 @@
             </p>
          
         <div>
-          <h4 class="font-semibold text-2xl">CALL NOW</h4>
-          <p class="text-lg text-gray-500" style="font-family: 'Rubik', sans-serif">
+          <h4 class="font-semibold text-xl">CALL NOW</h4>
+          <p class="text-md text-gray-500" style="font-family: 'Rubik', sans-serif">
             +91 9381391721
           </p>
         </div>
@@ -300,7 +282,7 @@
             <div class=" max-w-5xl flex flex-col lg:flex-row rounded-lg shadow-lg bg-white">
             
               <div class="lg:flex-2 flex flex-col items-center justify-center p-4 lg:rounded-lg lg:rounded-bl-lg">
-                <form class="flex flex-col items-center w-[400px]">
+                <form class="flex flex-col items-center w-[300px]">
                   <h1 class="text-4xl mb-6 font-bold">Contact us</h1>
                   <input
                     type="text"
@@ -317,10 +299,10 @@
                     class="w-11/12 max-w-md text-xl p-4 rounded-lg bg-gray-200 mb-2 outline-none"
                   />
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Contact Number"
                     name="contact"
-                    
+                    required
                     class="w-11/12 max-w-md text-xl p-4 rounded-lg bg-gray-200 mb-2 outline-none"
                   />
                   <textarea
@@ -329,7 +311,7 @@
                     required
                     class="w-11/12 max-w-md p-4 text-xl rounded-lg bg-gray-200 mb-2 outline-none h-32"
                   ></textarea>
-                  <button type="submit" style="background-image: linear-gradient(200deg, rgba(0, 0, 0, 1) 0%, rgba(14, 144, 221, 1) 100%)" class="py-3 px-6 text-xl tracking-wide text-white font-bold rounded-full shadow-lg mt-4">Send Message</button>
+                  <button type="submit" style="background-image: linear-gradient(200deg, rgba(0, 0, 0, 1) 0%, rgba(14, 144, 221, 1) 100%)" class="py-3 px-6 text-xl tracking-wide text-white font-bold rounded-full hover:scale-110 shadow-lg mt-4">Send Message</button>
                 </form>
               </div>
               
@@ -339,7 +321,7 @@
           </div>
           
         </div>
-      
+      </section>
     </div>
 
     <footer
@@ -477,7 +459,7 @@
               <a href="/terms-and-conditions.html">Terms &amp; conditions</a>
             </li>
             <li class="cursor-pointer underline-offset-2 hover:underline">
-              Contact us
+              <a href="/contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -545,5 +527,6 @@
       </div>
     </div>
   </footer>
+
   </body>
 </html>
