@@ -207,7 +207,8 @@ window.onload = () => {
 
 
   switch(state){
-    
+    case "digital-marketing":
+      
   }
 
 }
