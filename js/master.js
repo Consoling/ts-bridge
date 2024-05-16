@@ -4,6 +4,7 @@ const dropdownElmnts = document.getElementById("nav_dpdn_elmnts_active");
 const cards = [
   {
     title: "Data Analytics",
+    id: "data-analytics",
     description: "What's included in the program?",
     img: "/media/course-4.jpg",
     features: [
@@ -15,6 +16,7 @@ const cards = [
   },
   {
     title: "Ethical Hacking",
+    id: "ethical-hacking",
     description: "What's included in the program ?",
     img: "/media/course-2.jpg",
     features: [
@@ -26,6 +28,7 @@ const cards = [
   },
   {
     title: "Full Stack Development",
+    id: "full-stack-web-development",
     description: "What's included in the program ?",
     img: "/media/course-3.jpg",
     features: [
@@ -41,6 +44,7 @@ const cards = [
 const nonTch = [
   {
     title: "Digital Marketing",
+    id: "digital-marketing",
     description: "What's included in the program?",
     img: "/media/course-8.jpg",
     features: [
@@ -53,6 +57,7 @@ const nonTch = [
 
   {
     title: "Sex Education",
+    id: "sex-education",
     description: "What's included in the program?",
     img: "/media/course-6.jpg",
     features: [
@@ -64,6 +69,7 @@ const nonTch = [
   },
   {
     title: "Stock Market Analysis",
+    id: "stock-market-analysis",
     description: "What's included in the program?",
     img: "/media/stock-market-analysis.jpg",
     features: [
@@ -79,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (
     window.location.pathname === "/" ||
     window.location.pathname === "/index.html" ||
-    window.location.pathname === '/courses.html'
+    window.location.pathname === "/courses.html"
   ) {
     const exploreProgCards = document.getElementById("exploreProgCards"); // Card container
 
@@ -89,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreProgCard.className =
         "explore_prog_card backdrop-blur-md bg-[#fff]/100  items-center modal-open transition-all duration-300 ease-out";
       exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
+
+      exploreProgCard.id = card?.id;
 
       const img = document.createElement("img");
       img.className = "w-full h-32 object-contain";
@@ -146,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const button = document.createElement("button");
       const a = document.createElement("a");
-      a.href = "/courses.html";
+      a.href = `/course-page.html?course=${card.id}`;
       a.className = "underline-none";
       a.textContent = "See Details ";
       const i = document.createElement("i");
@@ -162,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.appendChild(button);
 
       exploreProgCards.appendChild(exploreProgCard);
+
       document.body.appendChild(modal);
 
       exploreProgCard.addEventListener("click", () => {
@@ -192,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (
     window.location.pathname === "/" ||
     window.location.pathname === "/index.html" ||
-    window.location.pathname === '/courses.html'
+    window.location.pathname === "/courses.html"
   ) {
     const nonTchCards = document.getElementById("nonTchCrds");
 
@@ -202,6 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreProgCard.className =
         "explore_prog_card backdrop-blur-md bg-[#fff]/100  items-center modal-open transition-all duration-300 ease-out";
       exploreProgCard.setAttribute("data-modal", `modal-${index + 1}`);
+
+      exploreProgCard.id = card.id;
 
       const img = document.createElement("img");
       img.className = "w-full h-32 object-contain";
@@ -259,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const button = document.createElement("button");
       const a = document.createElement("a");
-      a.href = "/courses.html";
+      a.href = `/course-page.html?course=${card.id}`;
       a.className = "underline-none";
       a.textContent = "See Details ";
       const i = document.createElement("i");
