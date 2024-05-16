@@ -185,9 +185,9 @@
     <main class="mt-[2px] mb-10 flex flex-col items-center gap-10">
       <div
         
-        class="py-10 px-[80px] flex justify-between items-center bg-[#151d37] w-full gap-8"
+        class="course-banner py-10 px-[80px] flex justify-between items-center bg-[#151d37] w-full gap-8 "
       >
-        <div class="flex flex-col items-start gap-8">
+        <div class="course-banner-info flex flex-col items-start justify-between gap-8 ">
           <h1 class="text-4xl font-bold text-white" id="crs__ttl">
             The Complete Digital Marketing Course
           </h1>
@@ -226,13 +226,23 @@
             </p>
           </div>
         </div>
-        <div class="rounded-md border-white border-2 w-[400px]">
-          <img
-            class="p-4 w-full h-full"
+        <div class="course-banner-img flex items-center justify-center rounded-md border-white border-2">
+          <!-- <img
+            class="p-4 w-[400px] h-auto"
             src="/media/digital-marketing.jpg"
             alt=""
             id="crs__img"
-          />
+          /> -->
+          <picture>
+            <source srcset="/media/digital-marketing.jpg" media="(max-width: 540px)">
+            <source srcset="/media/digital-marketing-2.jpg" media="(max-width: 1024px)">
+            <img
+            class="p-4 w-[400px] h-auto"
+            src="/media/digital-marketing.jpg"
+            alt=""
+            id="crs__img"
+            />
+          </picture>
         </div>
       </div>
 
@@ -501,7 +511,7 @@
                 <a href="/terms-and-conditions.html">Terms &amp; conditions</a>
               </li>
               <li class="cursor-pointer underline-offset-2 hover:underline">
-                Contact us
+                <a href="/contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -510,7 +520,8 @@
             <h4 class="font-semibold text-[#0e90dd]">QUICK LINKS</h4>
             <ul class="mt-4 w-fit space-y-3">
               <li class="cursor-pointer underline-offset-2 hover:underline">
-                <a href="https://forms.gle/wqSSiMgVUvZd9gKg7">Find work</a>
+                
+                <a href="/careers.html">Find work</a>
               </li>
 
               <li class="cursor-pointer underline-offset-2 hover:underline">
@@ -519,7 +530,7 @@
                 >
               </li>
               <li class="cursor-pointer underline-offset-2 hover:underline">
-                Events
+                <a href="/blogs.html">Events</a>
               </li>
               <li class="cursor-pointer underline-offset-2 hover:underline">
                 <a href="/blogs.html">Blog</a>
@@ -542,10 +553,10 @@
               </button>
             </div>
 
-            <p class="text-md text-center mt-6 lg:text-xl">
+            <p class="text-md text-center mt-6 lg:text-xl ">
               ©2024
               <a
-                class="text-[#f2f2f2] underline"
+                class="text-[#f2f2f2] underline text-red-500"
                 href="https://startapoderoventures.com/"
                 >Startupodero Ventures.
               </a>
