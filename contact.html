@@ -18,6 +18,24 @@
         s.async = 1;
         d.getElementsByTagName("head")[0].appendChild(s);
       })();
+
+         // Function to retrieve status message from URL parameter
+         function getStatusMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            return status;
+        }
+
+        // Function to display status message in an alert box
+        function showAlertMessage() {
+            const status = getStatusMessage();
+            if (status) {
+                alert(status);
+            }
+        }
+
+        // Call the showAlertMessage function when the page loads
+        window.onload = showAlertMessage;
     </script>
 
     <link
