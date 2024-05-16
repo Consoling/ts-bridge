@@ -6,7 +6,7 @@ const cards = [
     title: "Data Analytics",
     id: "data-analytics",
     description: "What's included in the program?",
-    img: "/media/course-4.jpg",
+    img: "/media/data-analytics.jpg",
     features: [
       "Data Collection and Cleaning",
       "Statistical Analysis",
@@ -18,7 +18,7 @@ const cards = [
     title: "Ethical Hacking",
     id: "ethical-hacking",
     description: "What's included in the program ?",
-    img: "/media/course-2.jpg",
+    img: "/media/ethical-hacking.jpg",
     features: [
       "Ethical Hacking Basics",
       "Network Security",
@@ -30,7 +30,7 @@ const cards = [
     title: "Full Stack Development",
     id: "full-stack-web-development",
     description: "What's included in the program ?",
-    img: "/media/course-3.jpg",
+    img: "/media/full-stack-web-development.jpg",
     features: [
       "Node.js Basics",
       "Express.js",
@@ -46,7 +46,7 @@ const nonTch = [
     title: "Digital Marketing",
     id: "digital-marketing",
     description: "What's included in the program?",
-    img: "/media/course-8.jpg",
+    img: "/media/digital-marketing.jpg",
     features: [
       "Search Engine Optimization (SEO)",
       "Social Media Marketing",
@@ -59,7 +59,7 @@ const nonTch = [
     title: "Sex Education",
     id: "sex-education",
     description: "What's included in the program?",
-    img: "/media/course-6.jpg",
+    img: "/media/sex-education.jpg",
     features: [
       "Sexual Health Education",
       "Relationship Dynamics",
@@ -748,52 +748,56 @@ const projectsData = [
   },
 ];
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  function generateProjectCards() {
-    const container = document.getElementById("projectContainer");
-
-    projectsData.forEach((project) => {
-      const card = document.createElement("div");
-      card.classList.add("project_box", "courses");
-
-      const img = document.createElement("img");
-      img.className = "w-full h-32 object-contain ";
-      img.src = project.img;
-      img.alt = "course-ts-bridge";
-
-      const titleElement = document.createElement("h3");
-      titleElement.textContent = project.title;
-
-      const skillsElement = document.createElement("div");
-      skillsElement.classList.add("courses_skills");
-      project.skills.forEach((skill) => {
-        const skillButton = document.createElement("button");
-        skillButton.className =
-          "bg-gradient-to-r from-violet-600 to-indigo-600 text-white";
-        skillButton.textContent = skill;
-        skillsElement.appendChild(skillButton);
+  if(window.location.pathname === '/courses' || window.location.pathname === '/courses.html'){
+    function generateProjectCards() {
+      const container = document.getElementById("projectContainer");
+  
+      projectsData.forEach((project) => {
+        const card = document.createElement("div");
+        card.classList.add("project_box", "courses");
+  
+        const img = document.createElement("img");
+        img.className = "w-full h-32 object-contain ";
+        img.src = project.img;
+        img.alt = "course-ts-bridge";
+  
+        const titleElement = document.createElement("h3");
+        titleElement.textContent = project.title;
+  
+        const skillsElement = document.createElement("div");
+        skillsElement.classList.add("courses_skills");
+        project.skills.forEach((skill) => {
+          const skillButton = document.createElement("button");
+          skillButton.className =
+            "bg-gradient-to-r from-violet-600 to-indigo-600 text-white";
+          skillButton.textContent = skill;
+          skillsElement.appendChild(skillButton);
+        });
+  
+        const skillsHeading = document.createElement("p");
+        skillsHeading.className = "text-sm font-semibold ";
+        skillsHeading.textContent = "Skills you'll be learning :";
+  
+        const button = document.createElement("button");
+        button.className = "button-with-anchor";
+        const anchor = document.createElement("a");
+        anchor.href = "https://forms.gle/wqSSiMgVUvZd9gKg7";
+        anchor.textContent = "View Details";
+        button.appendChild(anchor);
+  
+        card.appendChild(img);
+        card.appendChild(titleElement);
+        card.appendChild(skillsHeading);
+        card.appendChild(skillsElement);
+        card.appendChild(button);
+  
+        container.appendChild(card);
       });
-
-      const skillsHeading = document.createElement("p");
-      skillsHeading.className = "text-sm font-semibold ";
-      skillsHeading.textContent = "Skills you'll be learning :";
-
-      const button = document.createElement("button");
-      button.className = "button-with-anchor";
-      const anchor = document.createElement("a");
-      anchor.href = "https://forms.gle/wqSSiMgVUvZd9gKg7";
-      anchor.textContent = "View Details";
-      button.appendChild(anchor);
-
-      card.appendChild(img);
-      card.appendChild(titleElement);
-      card.appendChild(skillsHeading);
-      card.appendChild(skillsElement);
-      card.appendChild(button);
-
-      container.appendChild(card);
-    });
+    }
+  
+    generateProjectCards();
   }
-
-  generateProjectCards();
 });
