@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             $mail->Username   = 'info@startapoderoventures.com'; // Replace with your SMTP email
             $mail->Password   = 'Ts_Br1dg3_Edu'; // Replace with your SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 465;
+            $mail->Port       = 587;
 
             $mail->setFrom('info@startapoderoventures.com');
             $mail->addAddress('tsbridgeedu@gmail.com');
@@ -35,11 +35,15 @@ if (isset($_POST['submit'])) {
 
             $mail->send();
             $status = "Email sent successfully.";
+            header("Location: contact.html?status=" . urlencode($status));
+            exit();
         } catch (Exception $e) {
             $status =  "Failed to send email.";
+            header("Location: contact.html?status=" . urlencode($status));
+            exit();
         }
     }
 
-    header("Location: contact.html");
+    // header("Location: contact.html");
     exit();
 }
