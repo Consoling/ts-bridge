@@ -19,17 +19,17 @@ if (isset($_POST['submit'])) {
 
         try {
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
+            $mail->Host       = 'smtp.hostinger.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'YOUR_SMTP_EMAIL'; // Replace with your SMTP email
-            $mail->Password   = 'YOUR_SMTP_PASSWORD'; // Replace with your SMTP password
+            $mail->Username   = 'info@startapoderoventures.com'; // Replace with your SMTP email
+            $mail->Password   = 'Ts_Br1dg3_Edu'; // Replace with your SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->Port       = 465;
 
-            $mail->setFrom('from@example.com');
+            $mail->setFrom('info@startapoderoventures.com');
             $mail->addAddress('tsbridgeedu@gmail.com');
             $mail->isHTML(false);
-            $mail->Subject = 'New Form Submission';
+            $mail->Subject = 'Query from customer';
             $mail->Body    = "Name: $userName\nEmail: $email\nContact: $contact\nMessage: $msg";
 
 
