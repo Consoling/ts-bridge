@@ -656,10 +656,10 @@ h6 {
   left: 0;
 }
 
-.search__jb{
+.search__jb button{
   background: linear-gradient(
     80deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(14, 144, 221, 1) 100%
+    #000000 0%,
+    #0e90dd 100%
   );
 }
