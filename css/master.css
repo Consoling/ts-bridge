@@ -242,6 +242,19 @@ h6 {
   margin-top: 1px;
 }
 
+.is-about-us-2 {
+  background-image: url("/media/about-banner-2.jpg");
+  background-position: 50%;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 200px 0px;
+  display: flex;
+  margin-top: 1px;
+}
+
 .section-gs-dark {
   background-color: #030a21;
   color: #fff;
@@ -623,4 +636,30 @@ h6 {
   .course-banner-info p{
     font-size: 18px;
   }
+}
+
+
+
+/* Careers CSS */
+.careers__sidebar{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* width: 20%; */
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure it's above other content */
+  transition: left 0.3s ease;
+}
+
+.careers__sidebar.active {
+  left: 0;
+}
+
+.search__jb{
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(14, 144, 221, 1) 100%
+  );
 }
