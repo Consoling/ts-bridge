@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/master.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -29,158 +30,254 @@
   <body class="flex flex-col">
     <!-- Navigation bar -->
     <nav
-      id="homeNavbar"
-      class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
-    >
-      <div
-        class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
-      >
-        <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
-          ><span
-            class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
-            >TS Bridge</span
-          >
-        </a>
-      </div>
-      <ul
-        class="flex block text-[#101114] py-3 rounded-3xl gap-7 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
-      >
-        <li
-          class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/">Home</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/courses.html">Courses</a>
-        </li>
-        <li
-          class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a
-            class="no-underline"
-            href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
-            >Community</a
-          >
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/about.html">About</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/blogs.html">Blogs</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/careers.html">Careers</a>
-        </li>
-        <li
-          class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
-        >
-          <a class="no-underline" href="/contact.html">Contact Us</a>
-        </li>
-      </ul>
+    id="navbar"
+    class="sticky top-0 nav_before_header z-20 bg-[#121212] flex max-[570px]:justify-between justify-around items-center px-10 py-5"
+  >
 
-      <div class="flex items-center justify-center gap-5 relative">
-        <button
-          class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
-        >
-          Sign up
-        </button>
-        <div
-          class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
-        >
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-google-play"></i>
-          </button>
-          <button class="text-lg hover:shadow-lg hover:shadow-white">
-            <i class="fa-brands fa-app-store-ios"></i>
-          </button>
-        </div>
-        <button
-          id="nav__dpdn_btn"
-          class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div
-          class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
-          id="nav_dpdn_elmnts_active"
-        >
-          <div class="flex text-white justify-end mr-2">
-            <i class="fa-solid fa-caret-up"></i>
-          </div>
-          <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
-            <ul
-              class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
-            >
-              <li class="gap-2 cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/">Home</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center">
-                  <a class="no-underline" href="/courses.html">Courses</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a
-                    class="no-underline"
-                    href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
-                    >Community</a
-                  ></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/about.html">About</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/careers.html"
-                    >Careers</a
-                  ></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/blogs.html">Blogs</a></span
-                >
-              </li>
-              <li class="cursor-pointer">
-                <span class="text-center"
-                  ><a class="no-underline" href="/blogs.html"
-                    > </a
-                  ></span
-                >
-                
-              </li>
 
-              <li>
-                <hr class="bg-black h-[2px] w-[80px] opacity-50" />
-              </li>
-              <li class="mt-2">
-                <button
-                  class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
-                >
-                  <span class="hover:shadow-md hover:shadow-white/50"
-                    >Sign up</span
-                  >
-                </button>
+  <nav class="sidebar bg-gray-800 text-gray-200 fixed top-0 left-0 h-full w-64 p-4 transition-width duration-100 z-50 close">
+    <header class="relative">
+        <i class='bx bx-toggle-left toggle cursor-pointer text-2xl absolute top-1/2 right-[-1.5rem] transform -translate-y-1/2 rotate-180 bg-red-500 text-gray-800 rounded-full p-1 transition-transform duration-300'></i>
+    </header>
+
+    <div class="menu-bar h-full flex flex-col justify-between overflow-y-auto">
+        <div class="menu mt-10">
+            <ul class="menu-links space-y-4">
+                <li class="nav-link flex items-center">
+                    <a href="#" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                        
+                        <i class="fa-solid fa-house"></i>
+                        <span class="text nav-text ml-4">Home</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                    <a href="./courses.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                       
+                        <i class="fa-solid fa-book"></i>
+                        <span class="text nav-text ml-4">Courses</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                    <a href="./community.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                       
+                        <i class="fa-regular fa-user"></i>
+                        <span class="text nav-text ml-4">Community</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                    <a href="./about.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                        
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="text nav-text ml-4">About</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                    <a href="./blogs.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                       
+                        <i class="fa-solid fa-blog"></i>
+                        <span class="text nav-text ml-4">Blogs</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                    <a href="./careers.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                      <i class="fa-solid fa-user-graduate"></i>
+                        
+                        <span class="text nav-text ml-4">Careers</span>
+                    </a>
+                </li>
+                <li class="nav-link flex items-center">
+                  <a href="./contact.html" class="flex items-center w-full p-2 rounded-lg hover:bg-blue-500 hover:text-gray-800">
+                      
+                      <i class="fa-solid fa-address-book"></i>
+                      <span class="text nav-text ml-4">ContactUs</span>
+                  </a>
               </li>
             </ul>
-          </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+  
+    <div
+      class="flex backdrop-blur-md opacity-100 max-[570px]:flex-col items-center gap-3 cursor-pointer hover:scale-110 duration-300 transition-all"
+    >
+      <img src="/media/logo.png" class="w-24 max-[570px]:w-10" /><a href="/"
+        ><span
+          class="nav_head_title text-[#23AAB9] text-[35px] max-[570px]:text-[20px]"
+          >TS Bridge</span
+        >
+      </a>
+    </div>
+    <ul
+      class="flex block text-[#101114] py-3 rounded-3xl gap-7 font-semibold backdrop-blur-sm opacity-60 px-4 bg-[#FCFCFD] max-[1024px]:hidden"
+    >
+      <li
+        class="gap-2 ml-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/">Home</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/courses.html">Courses</a>
+      </li>
+      <li
+        class="cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a
+          class="no-underline"
+          href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+          >Community</a
+        >
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/about.html">About</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/blogs.html">Blogs</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/careers.html">Careers</a>
+      </li>
+      <li
+        class="mr-4 cursor-pointer hover:shadow-xl hover:shadow-white hover:scale-110 duration-300 transition-all"
+      >
+        <a class="no-underline" href="/contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+    <div class="flex items-center justify-center gap-5 relative">
+      <button
+        class="max-[768px]:hidden text-white bg-[#5169F6] px-4 py-2 rounded-md hover:scale-110 hover:shadow-lg hover:shadow-white ease-in-out duration-300 transition-all"
+      >
+        Sign up
+      </button>
+      <div
+        class="flex bg-white gap-5 max-[570px]:gap-7 px-3 py-1 max-[570px]:py-2 max-[570px]:px-5 rounded-md bg:opacity-50 backdrop-blur-md"
+      >
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-google-play"></i>
+        </button>
+        <button class="text-lg hover:shadow-lg hover:shadow-white">
+          <i class="fa-brands fa-app-store-ios"></i>
+        </button>
+      </div>
+      <button
+        id="nav__dpdn_btn"
+        class="bg-[#FCFCFD] backdrop-blur-md px-2 py-1 max-[570px]:py-2 max-[570px]:px-3 rounded-3xl lg:hidden max-[570px]:bg-[#5169F6] max-[570px]:text-white"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div
+        class="flex flex-col absolute z-10 top-11 right-3 hidden nav_dpdn_elmnts_active"
+        id="nav_dpdn_elmnts_active"
+      >
+        <div class="flex text-white justify-end mr-2">
+          <i class="fa-solid fa-caret-up"></i>
+        </div>
+        <div class="flex rounded-md bg-white shadow-lg shadow-white/50">
+          <ul
+            class="flex items-center flex-col block text-[#101114] py-8 px-10 text-center rounded-3xl gap-6 font-semibold backdrop-blur-sm bg-[#FCFCFD]"
+          >
+            <li class="gap-2 cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/">Home</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center">
+                <a class="no-underline" href="/courses.html">Courses</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a
+                  class="no-underline"
+                  href="https://chat.whatsapp.com/E5456WyDFxf6rloCjZQyAJ"
+                  >Community</a
+                ></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/about.html">About</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/careers.html">Careers</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/blogs.html">Blogs</a></span
+              >
+            </li>
+            <li class="cursor-pointer">
+              <span class="text-center"
+                ><a class="no-underline" href="/blogs.html">Contact Us</a></span
+              >
+            </li>
+
+            <li>
+              <hr class="bg-black h-[2px] w-[80px] opacity-50" />
+            </li>
+            <li class="mt-2">
+              <button
+                class="text-white bg-[#5169F6] px-3 py-1.5 rounded-md hover:scale-110 ease-in-out duration-300 transition-all"
+              >
+                <span class="hover:shadow-md hover:shadow-white/50"
+                  >Sign up</span
+                >
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav> 
+ 
+
+
+
+
+
+
+
+
+
+<script>
+  const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav.sidebar'),
+      toggle = body.querySelector('.toggle');
+  
+  toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('close');
+      if (sidebar.classList.contains('close')) {
+          sidebar.style.width = '0';
+          sidebar.style.padding = '0';
+          document.querySelector('.home').style.marginLeft = '0';
+          toggle.style.transform = 'rotate(0deg)';
+          toggle.style.right = '-1.25rem'; // Adjust to keep the button visible
+      } else {
+          sidebar.style.width = '16rem'; // 256px
+          sidebar.style.padding = '1rem';
+          document.querySelector('.home').style.marginLeft = '16rem'; // 256px
+          toggle.style.transform = 'rotate(180deg)';
+          toggle.style.right = '-1.5rem'; // Original position
+      }
+  });
+</script> 
 
     <main class="mt-[2px] mb-10 flex flex-col items-center gap-10">
       <div
