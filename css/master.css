@@ -243,7 +243,7 @@ h6 {
 }
 
 .is-about-us-2 {
-  background-image: url("/media/about-banner-2.jpg");
+  background-image: url("/media/careers-bg.avif");
   background-position: 50%;
   background-size: cover;
   flex-direction: column;
@@ -662,4 +662,9 @@ h6 {
     rgba(0, 0, 0, 1) 0%,
     rgba(14, 144, 221, 1) 100%
   );
+}
+
+.side-nav.open{
+  left:0;
+  transition: 350ms;
 }

@@ -801,3 +801,10 @@ document.addEventListener("DOMContentLoaded", () => {
     generateProjectCards();
   }
 });
+
+
+let menu=document.querySelector('#menu-bar');
+let navItems=document.querySelector('.side-nav');
+let closeMenu=document.querySelector('#close-btn')
+menu.addEventListener("click",()=>navItems.classList.toggle('open'));
+closeMenu.addEventListener("click",()=>menu.click());
